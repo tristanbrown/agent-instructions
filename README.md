@@ -4,7 +4,7 @@ This repo holds `AGENTS.GLOBAL.md`, the universal rules for AI agents.
 Projects pull it into `.agents/` using **Git subtree (with squash)**.
 
 ## Add to a new project
-    git remote add agent-instructions git@github.com:you/agent-instructions.git
+    git remote add agent-instructions git@github.com:tristanbrown/agent-instructions.git
     git fetch agent-instructions
     git subtree add --prefix=.agents agent-instructions main --squash
 
