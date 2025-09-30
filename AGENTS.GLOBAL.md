@@ -57,11 +57,11 @@ Each repo supplements these with `AGENTS.PROJECT.md`.
    - Introducing new patterns is welcome if they clearly improve clarity, adaptability, or replace outdated/messy approaches.  
 
 10. **Thoughtful use of dependencies**  
-   - External dependencies are allowed if they are reliable, well-maintained, and reduce workload significantly.  
-   - Prefer built-in features or existing project utilities when they serve the purpose well.  
-   - Avoid unnecessary or redundant dependencies.  
-   - If adding a dependency, explain why it’s the right tool.  
-   - Ensure dependencies are flexible enough to adapt to future needs.  
+    - External dependencies are allowed if they are reliable, well-maintained, and reduce workload significantly.  
+    - Prefer built-in features or existing project utilities when they serve the purpose well.  
+    - Avoid unnecessary or redundant dependencies.  
+    - If adding a dependency, explain why it’s the right tool.  
+    - Ensure dependencies are flexible enough to adapt to future needs.  
 
 ---
 
