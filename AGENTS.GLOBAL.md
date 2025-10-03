@@ -61,7 +61,12 @@ Each repo supplements these with `AGENTS.PROJECT.md`.
     - Prefer built-in features or existing project utilities when they serve the purpose well.  
     - Avoid unnecessary or redundant dependencies.  
     - If adding a dependency, explain why it’s the right tool.  
-    - Ensure dependencies are flexible enough to adapt to future needs.  
+    - Ensure dependencies are flexible enough to adapt to future needs.
+
+11. **Isolated environments**  
+    - Do not install dependencies directly to the system.  
+    - Always use project-specific environments (e.g., virtualenv, conda, venv, or equivalent language-specific solutions).  
+    - Ensure instructions and code are portable across machines without requiring system-level installs.  
 
 ---
 
