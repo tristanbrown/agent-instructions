@@ -64,9 +64,10 @@ Each repo supplements these with `AGENTS.PROJECT.md`.
     - Ensure dependencies are flexible enough to adapt to future needs.
 
 11. **Isolated environments**  
-    - Do not install dependencies directly to the system.  
-    - Always use project-specific environments (e.g., virtualenv, conda, venv, or equivalent language-specific solutions).  
-    - Ensure instructions and code are portable across machines without requiring system-level installs.  
+    - Do not install dependencies directly to the host system.  
+    - Always use isolated environments (e.g., venv, conda, or language-specific equivalents).  
+    - Containerized environments (e.g., Docker) are an exception: system-level installs inside a container are acceptable.  
+    - Ensure setups are portable and reproducible across machines.  
 
 ---
 
