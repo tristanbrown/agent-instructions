@@ -67,7 +67,12 @@ Each repo supplements these with `AGENTS.PROJECT.md`.
     - Do not install dependencies directly to the host system.  
     - Always use isolated environments (e.g., venv, conda, or language-specific equivalents).  
     - Containerized environments (e.g., Docker) are an exception: system-level installs inside a container are acceptable.  
-    - Ensure setups are portable and reproducible across machines.  
+    - Ensure setups are portable and reproducible across machines.
+
+12. **Testing design**  
+    - Focus on realistic scenarios that detect regressions and misbehavior after updates.
+    - Include both unit and end-to-end tests, but avoid rare edge cases unlikely in real use.
+    - Keep tests performant and concise by reusing setup, teardown, and shared fixtures.
 
 ---
 
