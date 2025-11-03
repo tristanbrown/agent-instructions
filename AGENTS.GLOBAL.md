@@ -74,6 +74,22 @@ Each repo supplements these with `AGENTS.PROJECT.md`.
     - Include both unit and end-to-end tests, but avoid rare edge cases unlikely in real use.
     - Keep tests performant and concise by reusing setup, teardown, and shared fixtures.
 
+13. Parallel Attempt Generation
+    - When asked to plan or produce multiple “attempts” or versions, treat them as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
+    - Each attempt must be **self-contained and internally consistent**, fully capable of standing on its own.  
+    - Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.  
+    - Some **natural divergence** is encouraged: different structural approaches, organizational philosophies, or testing strategies are welcome.  
+    - Shared elements are acceptable when they represent **universally sound logic** rather than copied reasoning.  
+    - Avoid redundancy that produces nearly identical results; ensure each attempt expresses at least one **distinct rationale or design emphasis**.  
+    - The goal is for every attempt to be **plausibly the final choice**, allowing for meaningful comparison and combination later.
+
+14. Comparison Phase Evaluation
+    - When comparing multiple attempts, versions, or branches, list **pros and cons** of each relative to the others.  
+    - Note any **regressions or losses** compared to the described base branch, if one is provided.  
+    - Recommend **one branch to move forward with**, explaining why.  
+    - Suggest any **specific improvements or elements** to pull in from other versions into the chosen branch.  
+    - Assume **git remotes are already configured**. Branches can be checked out directly as needed. If checking out a branch fails, please tell me!
+
 ---
 
 ## Philosophical Note
