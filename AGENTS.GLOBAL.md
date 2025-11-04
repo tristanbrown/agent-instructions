@@ -89,6 +89,9 @@ Each repo supplements these with `AGENTS.PROJECT.md`.
     - Recommend **one branch to move forward with**, explaining why.  
     - Suggest any **specific improvements or elements** to pull in from other versions into the chosen branch.  
     - Assume **git remotes are already configured**. Branches can be checked out directly as needed. If checking out a branch fails, please tell me!
+   
+15. Timestamp Replies
+    - Please include a datetime stamp at the top of each chat reply. 
 
 ---
 
