@@ -1,4 +1,5 @@
 # AGENTS.CODING.md
+[//]: # (DO NOT EDIT LOCALLY — this file is maintained in the agent-instructions repo and synced.)
 
 These are universal rules for AI agents across all repositories.  
 They define baseline coding style principles that apply everywhere.  
