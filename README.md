@@ -1,4 +1,5 @@
 # Agent Instructions – Usage Guide
+[//]: # (DO NOT EDIT LOCALLY — this file is maintained in the agent-instructions repo and synced.)
 
 This repo holds `AGENTS.GLOBAL.md`, the universal rules for AI agents.  
 Projects pull it into `.agents/` using **Git subtree (with squash)**.
