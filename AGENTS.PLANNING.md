@@ -7,15 +7,15 @@
 
 Planning documents are stored in `docs/`.
 
-Docs named like `*_outline.md` are used to fully specify features.  
+Docs named like `*_outline.md` or in `outlines/` are used to fully specify features.  
 - Do not modify these unless specifically asked to.
 
-Docs named like `*_plan.md` are stepwise implementation plans,  
-- Generated from `*_outline.md` specification files  
+Docs named like `*_plan.md` or in `plans/` are stepwise implementation plans,  
+- Generated from `*_outline.md` or `outlines/*.md` specification files  
 - Broken down into sequential stages
 
 When asked to generate an implementation plan:  
-- ONLY generate a `*_plan.md` file  
+- ONLY generate a `*_plan.md` or `plans/*.md` file  
 - DO NOT begin actual implementation until specifically asked
 
 ---
@@ -58,4 +58,4 @@ These are **non-negotiable constraints**. Any violation = bad plan.
 
 - ONLY work on the **specific stage(s)** requested  
 - DO NOT get ahead of yourself or implement more than is requested  
-- Use the full `*_outline.md` and `*_plan.md` documents as **context** and **foresight** to guide implementation of each stage
+- Use the full `outline` and `plan` documents as **context** and **foresight** to guide implementation of each stage
