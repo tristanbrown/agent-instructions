@@ -42,15 +42,17 @@ These are **non-negotiable constraints**. Any violation = bad plan.
 
 ## Special rules for database schema and migrations
 
-- **Database schema changes must be isolated into their own minimal, standalone stage(s)**
-- Once a schema or migration is applied, it **becomes the unified representation of the database** for all future work.
-- Do **not** mix database changes with other logic or UI feature changes in the same stage.
-- A schema-only stage should include:
-  - Table changes
-  - Migration logic
-  - Any build output
-  - Smoke test to confirm the app launches and persists data
-- Prefer to do schema stages **as early as possible** so that data is created in its proper form, and the same schemas are shared by all downstream stages and branches.
+- **Only add schema when a feature requires persistent data.**
+- Use transient or scratch storage for early-stage experiments.
+- Let real sample payloads inform table and column design.
+
+- **When schema is needed, implement it in a single, focused stage:**
+  - Include table definitions, migration logic, build output, and a smoke test.
+  - Do **not** mix schema changes with logic or UI features.
+  - Complete the schema stage **before** writing any code that depends on it.
+
+- Once a migration is applied, it **becomes the unified representation of the database** for all future work.
+- Avoid scattering follow-up schema tweaks across many later stages.
 
 ---
 
