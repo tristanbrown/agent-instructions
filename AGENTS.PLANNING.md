@@ -22,7 +22,7 @@ When asked to generate an implementation plan:
 
 ## Rules for splitting implementation into stages
 
-- For each stage, define the Goal, the Scope, the Decisions that I need to make, and the Acceptance Criteria that I need to manually test and evaluate.
+- For each stage, define the Goal, the Scope, the Implementation Decisions that have been made, and the Acceptance Criteria that I, the human developer, need to manually test and evaluate.
 - The app or project must be **functional and testable** after each stage  
 - **“TESTABLE”** means I can try out and evaluate the new feature as an end user, **within the app UI or project API**, not through debug logs or dev tools  
 - Prefer implementing **isolated or foundational features first**  
@@ -33,6 +33,13 @@ When asked to generate an implementation plan:
 Each stage must:
 - Add something **functional and testable**  
 - Avoid **dangling logic or UI**
+
+Every implementation plan must be grounded in concrete decisions.
+- Do not refer to generic concepts (e.g. “schema,” “pipeline,” “object,” “job,” “API”) unless you have already specified:
+  - What it will be implemented as,
+  - Where it will run, and
+  - How it will be used or tested.
+- An implementation stage that makes no concrete decisions is not an implementation stage.
 
 These are **non-negotiable constraints**. Any violation = bad plan.
 - At the top of the document, please include a brief "Strategy" statement justifying the order of the stages
