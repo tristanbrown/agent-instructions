@@ -22,7 +22,7 @@ When asked to generate an implementation plan:
 
 ## Rules for splitting implementation into stages
 
-- For each stage, define the Goal, the Scope, and the Acceptance Criteria that I, the human developer, need to manually test and evaluate.
+- For each stage, define the Goal, the Scope, the Decisions that I need to make, and the Acceptance Criteria that I need to manually test and evaluate.
 - The app or project must be **functional and testable** after each stage  
 - **“TESTABLE”** means I can try out and evaluate the new feature as an end user, **within the app UI or project API**, not through debug logs or dev tools  
 - Prefer implementing **isolated or foundational features first**  
@@ -42,8 +42,8 @@ These are **non-negotiable constraints**. Any violation = bad plan.
 
 ## Special rules for database schema and migrations
 
+- Do not create a database before it is necessary.
 - **Only add schema when a feature requires persistent data.**
-- Use transient or scratch storage for early-stage experiments.
 - Let real sample payloads inform table and column design.
 
 - **When schema is needed, implement it in a single, focused stage:**
