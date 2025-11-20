@@ -38,11 +38,16 @@ Consider the ordering of stages.
 - Ensure data input pathways are implemented BEFORE or TOGETHER WITH any feature that needs to use that data!
 
 Every implementation plan must be grounded in concrete decisions.
-- Do not refer to generic concepts (e.g. “schema,” “pipeline,” “object,” “job,” “API”) unless you have already specified:
+- When you introduce a concept (e.g. “schema,” “pipeline,” “object,” “job,” “API”) briefly specify (at a high level):
   - What it will be implemented as,
   - Where it will run, and
   - How it will be used or tested.
 - An implementation stage that makes no concrete decisions is not an implementation stage.
+
+Level of detail for plans.
+- Plans should describe stages, responsibilities, and key constraints, not every detail of implementation.
+- Acceptance Criteria should describe observable behavior and operability, not read like unit test code.
+- Keep plans concise: prefer short, direct bullets over long paragraphs, and include only details that materially affect architecture, sequencing, or interfaces.
 
 Do quality control to verify these constraints have been followed.
 - At the top of the document, please include a brief "Strategy" statement justifying the order of the stages
