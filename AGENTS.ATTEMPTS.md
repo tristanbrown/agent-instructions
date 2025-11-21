@@ -5,12 +5,11 @@
 
 ## Parallel Attempt Generation
 - When asked to plan or produce multiple “attempts” or versions, treat them as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
-- Each attempt must be **self-contained and internally consistent**, fully capable of standing on its own.  
+- Each attempt must be **self-contained and internally consistent**. 
 - Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.  
 - Some **natural divergence** is encouraged: different structural approaches, organizational philosophies, or testing strategies are welcome.  
-- Shared elements are acceptable when they represent **universally sound logic** rather than copied reasoning.  
-- Avoid redundancy that produces nearly identical results; ensure each attempt expresses at least one **distinct rationale or design emphasis**.  
- - The goal is for every attempt to be **plausibly the final choice**, allowing for meaningful comparison and combination later.
+- Shared elements are acceptable when they represent **universally sound logic** rather than lazy copying.
+- Avoid redundancy that produces nearly identical results; ensure each attempt expresses at least one **distinct rationale or design emphasis**.
 
 ---
 

@@ -33,15 +33,21 @@ Composition of stages.
 - Prefer making individual stages **self-contained and modular**
 
 Consider the ordering of stages.
-- Prefer implementing **isolated or foundational features first**  
-- Implement **highly intertwined features with many dependencies last**  
+- Prefer implementing **isolated or foundational features first**
+- Implement **highly intertwined features with many dependencies last**
+- Build **core or representative features first**, and add complexity incrementally
 - Ensure data input pathways are implemented BEFORE or TOGETHER WITH any feature that needs to use that data!
 
+Rule against premature productionization.
+- Don’t include production features (auth, hosting, logging, deployment, compliance, etc.) until explicitly requested.
+- Assume single-user, local-only prototypes. Prioritize developer speed and testability over scalability.
+- Build core functionality first. Do not add infrastructure until a public release is planned.
+
 Every implementation plan must be grounded in concrete decisions.
-- When you introduce a concept (e.g. “schema,” “pipeline,” “object,” “job,” “API”) briefly specify (at a high level):
-  - What it will be implemented as,
-  - Where it will run, and
-  - How it will be used or tested.
+- When you introduce a concept briefly specify (at a high level):
+  - The tech stack it will use
+  - The structure or role of the component
+  - How it will be used or tested
 - An implementation stage that makes no concrete decisions is not an implementation stage.
 
 Level of detail for plans.
