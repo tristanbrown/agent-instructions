@@ -1,4 +1,4 @@
-# AGENTS.PLANNING.md
+# AGENTS.ATTEMPTS.md
 [//]: # (DO NOT EDIT LOCALLY — this file is maintained in the agent-instructions repo and synced.)
 
 ---
