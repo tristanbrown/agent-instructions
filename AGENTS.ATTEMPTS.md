@@ -22,8 +22,19 @@
 ---
 
 ## Comparison Phase Evaluation
-- When comparing multiple attempts, versions, or branches, list **pros and cons** of each relative to the others.  
-- Note any **regressions or losses** compared to the described base branch, if one is provided.  
-- Recommend **one branch to move forward with**, explaining why.  
-- Suggest any **specific improvements or elements** to pull in from other versions into the chosen branch.  
-- Assume **git remotes are already configured**. Branches can be checked out directly as needed. If checking out a branch fails, please tell me!
+
+When comparing multiple attempts, versions, or branches:
+- List **pros and cons** of each relative to the others.
+- Note any **regressions or losses** compared to the described base branch, if one is provided.
+- Recommend **one version to move forward with**, explaining why.
+- Suggest any **specific improvements or elements** to pull in from other versions into the chosen version.
+
+Giving explanations and **star ratings (1–5)**:
+- Assess **clarity and organization** of each version’s structure and writing.
+- Evaluate **creativity and diversity** of approaches (e.g. reworded variants vs. truly distinct ideas).
+- Flag any **notable simplifications or elegant solutions**, especially ones that reduce premature complexity.
+- Identify any **unique contributions** that appear in only one version.
+- When evaluating outlines or implementation plans, consider **overspecification or vagueness**.
+
+Note:
+- Assume **git remotes are already configured**. Branches can be checked out directly. If checkout fails, report it.
