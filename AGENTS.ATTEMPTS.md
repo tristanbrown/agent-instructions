@@ -30,9 +30,11 @@ When comparing multiple attempts, versions, or branches:
 
 ### Step 1: Score and describe each version individually
 For each version, provide **explanations and star ratings (1–5)** in these dimensions:
-- **Clarity and organization** of structure and writing.
-- **Creativity and diversity** of approaches (e.g. truly distinct ideas vs. reworded variants).
-- **Simplicity and elegance**, especially in avoiding premature complexity.
+- **Clarity and organization** of structure or writing.
+- **Creativity and ingenuity** of approach (diversity, inspired design, or clever solutions, as appropriate).
+- **Architectural elegance** (modularity, separation of concerns, generality).
+- **Abstraction and conceptual clarity** (objects and their responsibilities are intuitive, reusable, and well-scoped).
+- **Simplicity and focus** (avoidance of premature complexity or feature creep).
 - **Overspecification or vagueness**, where applicable (e.g. in implementation plans).
 - **Overall quality**.
 
