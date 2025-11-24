@@ -30,12 +30,15 @@ When comparing multiple attempts, versions, or branches:
 - Recommend **one version to move forward with**, explaining why.
 - Suggest any **specific improvements or elements** to pull in from other versions into the chosen version.
 
-Giving explanations and **star ratings (1–5)**:
-- Assess **clarity and organization** of each version’s structure and writing.
-- Evaluate **creativity and diversity** of approaches (e.g. reworded variants vs. truly distinct ideas).
-- Flag any **notable simplifications or elegant solutions**, especially ones that reduce premature complexity.
+For each version, give explanations and **star ratings (1–5)** along these dimensions:
+- **Clarity and organization** of structure and writing.
+- **Creativity and diversity** of approaches (e.g. truly distinct ideas vs. reworded variants).
+- Highlight any **notable simplifications or elegant solutions**, especially those that reduce premature complexity.
+- For outlines or implementation plans, assess **overspecification or vagueness**.
+- Overall quality.
+
+Additionally:
 - Identify any **unique contributions** that appear in only one version.
-- When evaluating outlines or implementation plans, consider **overspecification or vagueness**.
 
 Note:
 - Assume **git remotes are already configured**. Branches can be checked out directly. If checkout fails, report it.
