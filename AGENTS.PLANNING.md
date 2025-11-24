@@ -37,7 +37,7 @@ Composition of stages.
   - The Implementation Decisions that have been made
   - The Acceptance Criteria that I, the human developer, need to manually test and evaluate.
 - Each stage must add something complete, avoiding **dangling logic or UI**
-- The app or project must be **operable and testable** after each stage
+- The package must be **operable and testable** after each stage
 - Prefer making individual stages **self-contained and modular**
 
 Consider the ordering of stages.
@@ -46,10 +46,12 @@ Consider the ordering of stages.
 - Build **core or representative features first**, and add complexity incrementally
 - Ensure data input pathways are implemented BEFORE or TOGETHER WITH any feature that needs to use that data!
 
-Rule against premature productionization.
-- Don’t include production features (auth, hosting, logging, deployment, compliance, etc.) until explicitly requested.
-- Assume single-user, local-only prototypes. Prioritize developer speed and testability over scalability.
-- Build core functionality first. Do not add infrastructure until a public release is planned.
+EXTREMELY STRICT RULE against premature productionization.
+- **DO NOT** include production/ops features (auth, hosting, logging, deployment, compliance, job queues, multi-tenant environments, monitoring, hardware scaling, etc.), unless **explicitly** requested.
+- Assume **single-user, local-only prototypes**. DO NOT even ATTEMPT to scale this into a production environment, unless **explicitly** requested.
+- Build core functionality first. **DO NOT** add unnecessary infrastructure!
+- **DO NOT INVENT A UI, CLI TOOL, OR OTHER INTERFACE METHOD** UNLESS EXPLICITLY REQUESTED!
+- Assume all plans and implementations **MUST BE** UI-agnostic, exposed only as importable objects with method-based access, unless a **specific UI** is requested.
 
 Every implementation plan must be grounded in concrete decisions.
 - When you introduce a concept briefly specify (at a high level):

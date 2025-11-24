@@ -18,9 +18,14 @@ When asked to plan or produce multiple “attempts” or versions:
   - Levels of abstraction and modularity
   - Engineering strategies
   - Numbers and ordering of implementation stages
-- Avoid feature-creep and unnecessary complexity. Each attempt should be **simple, elegant, and clearly differentiated** in its **core strategy**, not distinguished by layering on frivolous extras or exceeding scope.
+- **DO NOT ALLOW** feature-creep or unnecessary complexity. Each attempt should be **simple, elegant, and clearly differentiated** in its **core strategy**, not distinguished by layering on frivolous extras or exceeding scope.
+- **DO NOT USE production/ops/instrumentation features** as a way to differentiate attempts!
+- **DO NOT USE DIFFERENT TYPES OF UI (e.g. CLI, GUI, REST API, etc)** as a way to differentiate attempts!
+- If a UI is specified, then **ALL VERSIONS** must implement **THAT SPECIFIC TYPE OF UI**.
+- If no UI is specified, then all plans and implementations **MUST BE UI-agnostic**, exposed only as **importable objects** with method-based access!
 - Shared elements are acceptable when they represent **universally sound logic** rather than lazy copying.
 - Each attempt should be **simple and elegant**, with at least one **distinct rationale or design emphasis** that sets it apart from the others.
+- If you are “tempted” to add any of the forbidden items above, **STOP** and choose another axis of variation instead!
 
 ---
 
@@ -29,7 +34,7 @@ When asked to plan or produce multiple “attempts” or versions:
 When comparing multiple attempts, versions, or branches:
 
 ### Step 1: Score and describe each version individually
-For each version, provide **explanations and star ratings (1–5)** in these dimensions:
+For each version, provide **explanations and 1-5 star ratings** (use colored, visual stars) in these dimensions:
 - **Clarity and organization** of structure or writing.
 - **Creativity and ingenuity** of approach (diversity, inspired design, or clever solutions, as appropriate).
 - **Architectural elegance** (modularity, separation of concerns, generality).
