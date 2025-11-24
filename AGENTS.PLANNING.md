@@ -7,11 +7,15 @@
 
 Planning documents are stored in `docs/`.
 
-Docs named like `*_outline.md` or in `outlines/` are used to fully specify features.  
-- Do not modify these unless specifically asked to.
+Docs named like `*_outline.md` or `outlines/*` define the project's scope.
+- Do not modify these unless specifically asked to
 
-Docs named like `*_plan.md` or in `plans/` are stepwise implementation plans,  
-- Generated from `*_outline.md` or `outlines/*.md` specification files  
+Docs named like `*_story.md` or `stories/*` are user stories.
+- Each story describes a specific task or goal a user might want to accomplish
+- Do not modify these unless specifically asked to
+
+Docs named like `*_plan.md` or `plans/*` are stepwise implementation plans,  
+- Generated in response to specific user stories, using outlines for guidance
 - Broken down into sequential stages
 
 When asked to generate an implementation plan:  
