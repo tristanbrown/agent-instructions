@@ -28,6 +28,8 @@ When asked to generate an implementation plan:
 
 The term **"stage"** refers specifically to implementation steps in a plan document. It does **not** refer to runtime or orchestration pipeline stages. Do not conflate the two.
 
+Refer to templates/plan.V1.md for format.
+
 Composition of stages.
 - For each stage, define:
   - The Goal
