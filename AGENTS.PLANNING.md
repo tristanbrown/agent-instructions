@@ -26,6 +26,8 @@ When asked to generate an implementation plan:
 
 ## Rules for splitting implementation into stages
 
+The term **"stage"** refers specifically to implementation steps in a plan document. It does **not** refer to runtime or orchestration pipeline stages. Do not conflate the two.
+
 Composition of stages.
 - For each stage, define:
   - The Goal
