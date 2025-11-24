@@ -3,7 +3,8 @@
 
 ---
 
-## Parallel Attempt Generation
+## Parallel Attempt Generation Protocol
+
 - When asked to plan or produce multiple “attempts” or versions, treat them as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
 - Each attempt must be **self-contained and internally consistent**. 
 - Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.  
@@ -21,7 +22,7 @@
 
 ---
 
-## Comparison Phase Evaluation
+## Comparison and Evaluation Protocol
 
 When comparing multiple attempts, versions, or branches:
 - List **pros and cons** of each relative to the others.
