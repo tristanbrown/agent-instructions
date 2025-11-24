@@ -12,17 +12,16 @@ When asked to plan or produce multiple “attempts” or versions:
 - Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.  
 - Encourage **creative divergence**. Consider exploring different:
   - Intuitive mental models of the problem domain
+  - Primary data abstractions and models
   - Architectures
   - Organizational philosophies
-  - Data models
   - Levels of abstraction and modularity
-  - Engineering strategies
   - Numbers and ordering of implementation stages
 - **DO NOT ALLOW** feature-creep or unnecessary complexity. Each attempt should be **simple, elegant, and clearly differentiated** in its **core strategy**, not distinguished by layering on frivolous extras or exceeding scope.
 - **DO NOT USE production/ops/instrumentation features** as a way to differentiate attempts!
-- **DO NOT USE DIFFERENT TYPES OF UI (e.g. CLI, GUI, REST API, etc)** as a way to differentiate attempts!
+- **DO NOT USE different types of UI (e.g. CLI, GUI, REST API, etc)** as a way to differentiate attempts!
 - If a UI is specified, then **ALL VERSIONS** must implement **THAT SPECIFIC TYPE OF UI**.
-- If no UI is specified, then all plans and implementations **MUST BE UI-agnostic**, exposed only as **importable objects** with method-based access!
+- If no UI is specified, then all plans and implementations **MUST BE UI-AGNOSTIC**, exposed only as **importable objects** with method-based access!
 - Shared elements are acceptable when they represent **universally sound logic** rather than lazy copying.
 - Each attempt should be **simple and elegant**, with at least one **distinct rationale or design emphasis** that sets it apart from the others.
 - If you are “tempted” to add any of the forbidden items above, **STOP** and choose another axis of variation instead!
