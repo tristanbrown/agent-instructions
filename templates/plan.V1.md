@@ -3,28 +3,28 @@
 
 ## Strategy
 
-Summarize this plan and explain what is unique about it. Justify the breakdown and order of the stages.
+Text
 
 ---
 
 ## Quality Check
 
-How well does this plan follow the rules in AGENTS.PLANNING.md?
+Text
 
 ---
 
 ## Stage 1. <Descriptive Name>
 
-**Goal:** What this stage accomplishes in the project.
+**Goal:** Text
 
 **Scope:**
-- Bullet list of what is included in this stage.
+- Bullet list
 
 **Implementation Decisions:**
-- Key technical and architectural choices.
+- Bullet list
 
 **Acceptance Criteria:**
-- Observable outcomes or behaviors that I, the human developer, must manually test and evaluate.
+- Bullet list
 
 ---
 
