@@ -26,16 +26,11 @@ When asked to generate an implementation plan:
 
 ## Rules for splitting implementation into stages
 
-The term **"stage"** refers specifically to implementation steps in a plan document. It does **not** refer to runtime or orchestration pipeline stages. Do not conflate the two.
+**NOTE:** The term **"stage"** refers specifically to implementation steps in a plan document. It does **not** refer to runtime or orchestration pipeline stages. Do not conflate the two.
 
-Refer to templates/plan.V1.md for format.
+**Refer to templates/plan.V1.md for format and subsection guidance.**
 
-Composition of stages.
-- For each stage, define:
-  - The Goal
-  - The Scope
-  - The Implementation Decisions that have been made
-  - The Acceptance Criteria that I, the human developer, need to manually test and evaluate.
+Breaking a plan down into stages.
 - Each stage must add something complete, avoiding **dangling logic or UI**
 - The package must be **operable and testable** after each stage
 - Prefer making individual stages **self-contained and modular**
@@ -52,22 +47,6 @@ EXTREMELY STRICT RULE against premature productionization.
 - Build core functionality first. **DO NOT** add unnecessary infrastructure!
 - **DO NOT INVENT A UI, CLI TOOL, OR OTHER INTERFACE METHOD** UNLESS EXPLICITLY REQUESTED!
 - Assume all plans and implementations **MUST BE** UI-agnostic, exposed only as importable objects with method-based access, unless a **specific UI** is requested.
-
-Every implementation plan must be grounded in concrete decisions.
-- When you introduce a concept briefly specify (at a high level):
-  - The tech stack it will use
-  - The structure or role of the component
-  - How it will be used or tested
-- An implementation stage that makes no concrete decisions is not an implementation stage.
-
-Level of detail for plans.
-- Plans should describe stages, responsibilities, and key constraints, not every detail of implementation.
-- Acceptance Criteria should describe observable behavior and operability, not read like unit test code.
-- Keep plans concise: prefer short, direct bullets over long paragraphs, and include only details that materially affect architecture, sequencing, or interfaces.
-
-Do quality control to verify these constraints have been followed.
-- At the top of the document, please include a brief "Strategy" statement justifying the order of the stages
-- Then reevaluate whether the implementation strategy follows the rules here, and refine or reorder stages as necessary
 
 ---
 

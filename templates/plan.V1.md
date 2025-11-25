@@ -3,13 +3,16 @@
 
 ## Strategy
 
-Summarize this plan and explain what is unique about it. Justify the breakdown and order of the stages.
+Summarize this plan and explain what is unique about it.
 
 ---
 
-## Quality Check
+## Outline
 
-How well does this plan follow the rules in AGENTS.PLANNING.md?
+**Stage 1:** Short, 1-line summary.
+**Stage 2:** Short, 1-line summary.
+...
+**Stage N:** Short, 1-line summary.
 
 ---
 
@@ -18,13 +21,17 @@ How well does this plan follow the rules in AGENTS.PLANNING.md?
 **Goal:** What this stage accomplishes in the project.
 
 **Scope:**
-- Bullet list of what is included in this stage.
+- Bullet list of what concepts are implemented in this stage.
+- Describe key objects/classes, their purpose, and how they relate to each other and the larger plan.
+- Don't clutter things up with pseudocode, variable or field names, or type hints.
 
 **Implementation Decisions:**
-- Key technical and architectural choices.
+- Bullet list of the key, high-level technical and architectural choices.
+- Still don't need pseudocode clutter.
 
 **Acceptance Criteria:**
-- Observable outcomes or behaviors that I, the human developer, must manually test and evaluate.
+- Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
+- Still no pseudocode.
 
 ---
 
