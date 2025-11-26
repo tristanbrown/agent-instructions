@@ -39,6 +39,14 @@ EXAMPLE:
 - Keep all processing in-memory for this story; no persistent database is introduced yet.
 - Ensure the final output is a list of `DataObject` items with stable ordering.
 
+REMEMBER:
+- DO NOT GIVE SPECIFIC FIELD, VARIABLE, AND PARAMETER NAMES!!! DO NOT USE TYPE HINTS!!! DO NOT WRITE PSEUDOCODE!!!
+- DO NOT GIVE SPECIFIC FIELD, VARIABLE, AND PARAMETER NAMES!!! DO NOT USE TYPE HINTS!!! DO NOT WRITE PSEUDOCODE!!!
+- DO NOT GIVE SPECIFIC FIELD, VARIABLE, AND PARAMETER NAMES!!! DO NOT USE TYPE HINTS!!! DO NOT WRITE PSEUDOCODE!!!
+- STAY CONCISE AND BRIEF!!!
+- STAY CONCISE AND BRIEF!!!
+- STAY CONCISE AND BRIEF!!!
+
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
 - Be specific!
