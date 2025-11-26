@@ -28,24 +28,20 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 - Bullet list of the key, high-level technical and architectural choices.
 - Name key objects/classes, their role, and how they are represented.
 - Make concrete decisions about *concepts* and *technologies*, but don't constrain implementation!
-- Don't clutter things up with pseudocode, parameter or field names, or type hints.
-- Stay as concise and brief as possible!
 
-EXAMPLE: 
+Match the style and level of detail in this example:
+- Use Python models (dataclasses or Pydantic-style) for:
+  - `RawDocument` (id, source type such as `amazon_api` or `web_review`, ASIN, URL or origin, text or structured payload, timestamps).
+  - `NormalizedProduct` (ASIN, title, brand, price, rating, key specs, review summary, attribute-level provenance).
 - Implement a `ClassName` that:
-  - Accepts a list of blah as input.
-  - Uses X to build Y output.
-  - Calls the `OtherClass` to produce a `CoolObject` for each input value.
+  - Accepts a list of IDs as input and maps `OtherObject` onto them.
+  - Stores IDs as an attribute for later reference.
+  - Uses AI-based summarization to convert `OtherObject` into `OutputObject` for each input value.
 - Keep all processing in-memory for this story; no persistent database is introduced yet.
-- Ensure the final output is a list of `DataObject` items with stable ordering.
+- Ensure the final output is a list of `OutputObject` items with stable ordering.
 
 REMEMBER:
-- DO NOT GIVE SPECIFIC FIELD, VARIABLE, AND PARAMETER NAMES!!! DO NOT USE TYPE HINTS!!! DO NOT WRITE PSEUDOCODE!!!
-- DO NOT GIVE SPECIFIC FIELD, VARIABLE, AND PARAMETER NAMES!!! DO NOT USE TYPE HINTS!!! DO NOT WRITE PSEUDOCODE!!!
-- DO NOT GIVE SPECIFIC FIELD, VARIABLE, AND PARAMETER NAMES!!! DO NOT USE TYPE HINTS!!! DO NOT WRITE PSEUDOCODE!!!
-- STAY CONCISE AND BRIEF!!!
-- STAY CONCISE AND BRIEF!!!
-- STAY CONCISE AND BRIEF!!!
+- Do not give function signatures! Do not name variables, fields, or parameters! Do not use type hints!
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
