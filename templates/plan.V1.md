@@ -21,15 +21,15 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 **Goal:** What this stage accomplishes in the project.
 
 **Scope:**
-- Bullet list of what concepts are implemented in this stage.
-- Name key objects/classes, and describe their purpose, and how they relate to each other and the larger plan.
-- Don't clutter things up with pseudocode, variable or field names, or type hints.
-- Give important conceptual details, not every input and output!
+- Short bullet list of the concepts that are implemented in this stage.
 
 **Implementation Decisions:**
 - Bullet list of the key, high-level technical and architectural choices.
 - Make concrete decisions. No hand-waving!
-- Still don't need pseudocode clutter.
+- Name key objects/classes, their role, and how they are represented.
+- Don't clutter things up with pseudocode, variable or field names, or type hints.
+- Give important conceptual details, not every input and output!
+- Stay brief!
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
