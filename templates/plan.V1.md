@@ -22,6 +22,7 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 
 **Scope:**
 - Short bullet list of the concepts that are implemented in this stage.
+- Aim for 3 lines, 60-100 characters.
 
 **Implementation Decisions:**
 - Bullet list of the key, high-level technical and architectural choices.
@@ -29,6 +30,14 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 - Make concrete decisions about *concepts* and *technologies*, but don't constrain implementation!
 - Don't clutter things up with pseudocode, parameter or field names, or type hints.
 - Stay as concise and brief as possible!
+
+EXAMPLE: 
+- Implement a `ClassName` that:
+  - Accepts a list of blah as input.
+  - Uses X to build Y output.
+  - Calls the `OtherClass` to produce a `CoolObject` for each input value.
+- Keep all processing in-memory for this story; no persistent database is introduced yet.
+- Ensure the final output is a list of `DataObject` items with stable ordering.
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
