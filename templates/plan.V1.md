@@ -30,6 +30,7 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 - Make concrete decisions about *concepts* and *tech stack*, but don't constrain implementation!
 - Don't clutter things up with function signatures, parameter names, field names, or type hints.
 - Stay as concise and brief as possible!
+  - Can use sub-bullets to break up verbosity and make lines shorter.
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
