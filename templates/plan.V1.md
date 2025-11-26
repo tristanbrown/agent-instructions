@@ -25,11 +25,10 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 
 **Implementation Decisions:**
 - Bullet list of the key, high-level technical and architectural choices.
-- Make concrete decisions. No hand-waving!
 - Name key objects/classes, their role, and how they are represented.
-- Don't clutter things up with pseudocode, variable or field names, or type hints.
-- Give important conceptual details, not every input and output!
-- Stay brief!
+- Make concrete decisions about *concepts* and *technologies*, but don't constrain implementation!
+- Don't clutter things up with pseudocode, parameter or field names, or type hints.
+- Stay as concise and brief as possible!
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
