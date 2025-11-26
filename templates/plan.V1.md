@@ -3,7 +3,7 @@
 
 ## Strategy
 
-Summarize this plan in a few sentences, explaining what is unique about it.
+Summarize this plan in a few sentences, explaining what is unique about it. Be specific about key objects/classes!
 
 ---
 
@@ -24,6 +24,7 @@ Summarize this plan in a few sentences, explaining what is unique about it.
 - Bullet list of what concepts are implemented in this stage.
 - Name key objects/classes, and describe their purpose, and how they relate to each other and the larger plan.
 - Don't clutter things up with pseudocode, variable or field names, or type hints.
+- Give important conceptual details, not every input and output!
 
 **Implementation Decisions:**
 - Bullet list of the key, high-level technical and architectural choices.
@@ -32,6 +33,7 @@ Summarize this plan in a few sentences, explaining what is unique about it.
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
+- Be specific!
 - Still no pseudocode.
 
 ---
