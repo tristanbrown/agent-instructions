@@ -23,6 +23,7 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 **Scope:**
 - Short bullet list of the concepts that are implemented in this stage.
 - Aim for 3 lines, 50-80 characters.
+- Do not use sub-bullets in this subsection. Just keep it short!
 
 **Implementation Decisions:**
 - Bullet list of the key, high-level technical and architectural choices.
@@ -30,7 +31,7 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 - Make concrete decisions about *concepts* and *tech stack*, but don't constrain implementation!
 - Don't clutter things up with function signatures, parameter names, field names, or type hints.
 - Stay as concise and brief as possible!
-  - Can use sub-bullets to break up verbosity and make lines shorter.
+  - Can use sub-bullets in this subsection to break up verbosity and make lines shorter.
 
 **Acceptance Criteria:**
 - Bullet list, in natural language, of the observable outcomes or behaviors that I, the human developer, need to manually test and evaluate.
