@@ -22,12 +22,13 @@ Summarize this plan in a few sentences, explaining what is unique about it. Be s
 
 **Scope:**
 - Short bullet list of the concepts that are implemented in this stage.
+- Aim for 3 lines, 50-80 characters.
 
 **Implementation Decisions:**
 - Bullet list of the key, high-level technical and architectural choices.
-- Name key objects/classes, their role, and how they are represented.
-- Make concrete decisions about *concepts* and *technologies*, but don't constrain implementation!
-- Don't clutter things up with pseudocode, parameter or field names, or type hints.
+- Name key objects/classes, what they are, and what they do.
+- Make concrete decisions about *concepts* and *tech stack*, but don't constrain implementation!
+- Don't clutter things up with function signatures, parameter names, field names, or type hints.
 - Stay as concise and brief as possible!
 
 **Acceptance Criteria:**
