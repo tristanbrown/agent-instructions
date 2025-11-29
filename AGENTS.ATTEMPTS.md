@@ -33,7 +33,7 @@ When asked to plan or produce multiple “attempts” or versions:
 When comparing multiple attempts, versions, or branches:
 
 ### Step 1: Score and describe each version individually
-For each version, provide **explanations and 1-5 star ⭐ ratings** (use colored, visual stars ⭐) in these dimensions:
+For each version, provide **explanations and 1-5 star ⭐ ratings** (use colored, visual stars like ⭐⭐⭐☆☆) in these dimensions:
 - **Clarity and organization** of structure or writing.
 - **Creativity and ingenuity** of approach (diversity, inspired design, or clever solutions, as appropriate).
 - **Architectural elegance** (modularity, separation of concerns, generality).
