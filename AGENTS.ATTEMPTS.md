@@ -29,6 +29,16 @@ When asked to plan or produce multiple “attempts” or versions:
 
 ---
 
+## Interactive Strategy Selection Protocol
+
+This is a modified version of the Parallel Attempts Protocol.
+- Instead of generating all of the attempts at once, I want you to propose each strategy to me with a BRIEF summary statement. 
+- I will say things like, "Accept", "Reject", "Clarify", "More like this", etc.
+- We keep going until I have "Accepted" the pre-determined number of different strategies.
+- Once you've confirmed I'm happy with our set of strategies, you can generate all of the implementation plans from them, following the rules of the Parallel Attempts Protocol and the planning rules. 
+
+---
+
 ## Comparison and Evaluation Protocol
 
 When comparing multiple attempts, versions, or branches:
@@ -45,7 +55,7 @@ For each version, provide **explanations and 1-5 star ⭐ ratings** in these dim
 - **Overall quality**.
 
 Rating Guidelines
-- Use colored, visual stars like ⭐⭐⭐☆☆.
+- Use colored, visual stars like this: ⭐⭐⭐☆☆
 - Be harsh! Be critical! Do not be generous! Every plan should not get 4 stars out of 5!
 
 ### Step 1.5: Did you use the colored stars?
