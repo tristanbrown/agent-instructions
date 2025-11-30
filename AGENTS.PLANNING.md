@@ -28,12 +28,20 @@ When asked to generate an implementation plan:
 
 **NOTE:** The term **"stage"** refers specifically to implementation steps in a plan document. It does **not** refer to runtime or orchestration pipeline stages. Do not conflate the two.
 
+### Step 1: Make sure you understand the assignment!
+- Tell me what you are implementing.
+- List my specs, constraints, and ‘must/forbidden’ rules in bullets.
+- Do not proceed until I confirm that you have it right!
+
+### Step 2: Breaking a plan down into stages.
+
 **Refer to templates/plan.V1.md for format and subsection guidance.**
 
-Breaking a plan down into stages.
+Scope Guidelines
 - Each stage must add something complete, avoiding **dangling logic or UI**
 - The package must be **operable and testable** after each stage
 - Prefer making individual stages **self-contained and modular**
+- Use the minimal number, size, and complexity of stages to implement the strategy, faithfully according to specifications!
 
 Consider the ordering of stages.
 - Prefer implementing **isolated or foundational features first**
@@ -47,6 +55,12 @@ EXTREMELY STRICT RULE against premature productionization.
 - Build core functionality first. **DO NOT** add unnecessary infrastructure!
 - **DO NOT INVENT A UI, CLI TOOL, OR OTHER INTERFACE METHOD** UNLESS EXPLICITLY REQUESTED!
 - Assume all plans and implementations **MUST BE** UI-agnostic, exposed only as importable objects with method-based access, unless a **specific UI** is requested.
+
+### Step 3: Quality Check
+- Go back and reevaluate the plan.
+- Do an audit against the constraints in the original spec.
+- If you find any point where the plan deviates from the spec, YOU MUST go back and revise the plan to match the spec. 
+- Don't give me violating plans! Fix the plan before presenting it to me!
 
 ---
 

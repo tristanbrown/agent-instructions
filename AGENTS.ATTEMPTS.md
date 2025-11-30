@@ -6,8 +6,9 @@
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
+- Do the Step 1 "Understand the Assignment" check just once. After I confirm, you can proceed with all attempts.
 
-- Treat them as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
+- Treat the attempts as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
 - Each attempt must be **self-contained and internally consistent**. 
 - Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.  
 - Encourage **creative divergence**. Consider exploring different:
