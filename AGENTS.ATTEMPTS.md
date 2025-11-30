@@ -34,7 +34,9 @@ When asked to plan or produce multiple “attempts” or versions:
 When comparing multiple attempts, versions, or branches:
 
 ### Step 1: Score and describe each version individually
-For each version, provide **explanations and 1-5 star ⭐ ratings** (use colored, visual stars like ⭐⭐⭐☆☆) in these dimensions:
+For each version, provide **explanations and 1-5 star ⭐ ratings** (use colored, visual stars like ⭐⭐⭐☆☆). Be harsh! Be critical! Do not be generous!
+
+Rate in these dimensions:
 - **Correctness**, properly adhering to the feature specs and constraints.
 - **Clarity and organization** of structure or writing.
 - **Creativity and ingenuity** of approach (diversity, inspired design, or clever solutions, as appropriate).
@@ -43,6 +45,9 @@ For each version, provide **explanations and 1-5 star ⭐ ratings** (use colored
 - **Simplicity and focus** (avoidance of premature complexity or feature creep).
 - **Overspecification or vagueness**, where applicable (e.g. in implementation plans).
 - **Overall quality**.
+
+### Step 1.5: Did you use the colored stars?
+- IF YOU DIDN'T USE THE COLORED STARS, **YOU HAVE TO GO BACK AND REDO STEP 1.** FOLLOW MY INSTRUCTIONS!!!
 
 ### Step 2: Compare across versions
 Describe for each version:
