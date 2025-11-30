@@ -4,12 +4,17 @@
 This repository uses layered agent instructions.
 
 1. **Global rules**
-   - All `.agents/AGENTS.*.md` files are part of the global instruction set.
-   - These define universal coding, workflow, and development rules shared across projects.
    - `.agents/README.md` is for humans, not agents.
+   - The `.agents/AGENTS.*.md` files define universal coding, workflow, and development rules shared across projects.
+   - To optimize token usage, some AGENTS files only need to be read in certain scenarios, and can be otherwise skipped. Follow this guide to choosing which AGENTS files to read and obey:
+      - `AGENTS.CHAT.md`: Always.
+      - `AGENTS.CODING.md`: When we are implementing code or creating implementation plans.
+      - `AGENTS.PLANNING.md`: When we are discussing planning docs, creating implementation plans, or implementing code.
+      - `AGENTS.ATTEMPTS.md`: When we are discussing, creating, or comparing multiple plan/code versions or parallel attempts.
 
 2. **Project-specific rules**
    - `AGENTS.PROJECT.md` at the project root contains rules unique to this repository.
+   - Always read and obey `AGENTS.PROJECT.md`!
    - When global and project rules conflict, the project rules take priority.
 
 ---

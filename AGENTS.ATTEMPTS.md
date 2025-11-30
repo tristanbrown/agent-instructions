@@ -41,6 +41,9 @@ This is a modified version of the Parallel Attempts Protocol.
 
 ## Comparison and Evaluation Protocol
 
+Use this protocol only when I ask for a **"full comparison,"** or **"comparison protocol."**
+It is not necessary to use this protocol for **"brief comparisons."**
+
 When comparing multiple attempts, versions, or branches:
 
 ### Step 1: Score and describe each version individually
