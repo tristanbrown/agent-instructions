@@ -74,6 +74,10 @@ They define baseline coding style principles that apply everywhere.
     - Include both unit and end-to-end tests, but avoid rare edge cases unlikely in real use.
     - Keep tests performant and concise by reusing setup, teardown, and shared fixtures.
 
+13. **Git restrictions**
+   - Do not use `git commit` or other repo-altering git commands, unless I specifically tell you to.
+   - If I tell you to work across multiple git branches, then committing to those branches may be necessary. 
+
 ---
 
 ## Philosophical Note
