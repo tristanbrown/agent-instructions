@@ -17,9 +17,15 @@ This repository uses layered agent instructions.
    - Always read and obey `AGENTS.PROJECT.md`!
    - When global and project rules conflict, the project rules take priority.
 
+3. **Local workspace rules**
+   - `AGENTS.LOCAL.md` may exist at the project root, containing rules unique to the local workspace.
+   - If `AGENTS.LOCAL.md` exists, always read and obey it!
+   - When conflicts arise, local rules take priority over both project and global rules.
+
 ---
 
 ## Interaction Flow
-1. Read all `.agents/AGENTS.*.md` files for global rules.
+1. Read the necessary `.agents/AGENTS.*.md` files for global rules.
 2. Then read `AGENTS.PROJECT.md` for repo-specific rules.
-3. If rules conflict, **project-specific rules override global rules**.  
+3. Then read `AGENTS.LOCAL.md` for workspace-specific rules.
+4. If rules conflict, **local rules override project-specific rules, which override global rules**.  
