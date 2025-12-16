@@ -3,6 +3,25 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+Before generating parallel attempts, identify the key strategic axes that will most meaningfully differentiate implementations.
+
+### Step 1: Draft Variation Axes
+- Identify candidate axes where architectural decisions could diverge.
+
+### Step 2: Classify Each Axis
+- **Fixed** – These choices are locked in or out of scope. All plans will use the same default.
+- **Vary Now** – These choices should be distributed across the set of attempts. No axis should have the same value across all plans.
+- **Defer** – These will be handled later, after first-stage implementation or during tuning.
+
+### Step 3: Constrain Attempt Generation
+- Enforce axis variation across the "Vary Now" set.
+- At least 2–3 core variation axes must differ across the generated attempts.
+- If the generated attempts fail to explore a diverse set of strategies, go back and regenerate with stricter constraints or more deliberate prompts.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
