@@ -3,6 +3,19 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+When you sense the attempts are converging on trivial variation (e.g., all of them share the same LLM or adapter strategy), follow this protocol before generating new plans:
+
+1. List the architectural axes that could genuinely change the solution (core LLM target, persistence layer, orchestration model, data flow boundaries, etc.).
+2. For each axis, tag it as either **must decide up front** (because it affects most stages and surfaces constraints) or **deferable** (because it can stay flexible until we commit to a specific plan).
+3. During the understanding-the-assignment check, note the fixed axes so every plan explicitly states those assumptions.
+4. If you still cannot settle on a must-decide axis, lock in whichever axis has the most impact, document the rationale, and treat the rest as deferred options to revisit after the best plan is chosen.
+
+This keeps plan generation focused on meaningful strategy-level variation instead of languages or adapters that can swap later.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
