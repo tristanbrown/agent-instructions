@@ -3,6 +3,48 @@
 
 ---
 
+## Axis Variation Discovery Protocol
+
+  
+
+Use this protocol when generating multiple attempts where the important axes of variation are not obvious upfront.
+
+  
+
+### Step 0: Axis Table (before any full plans)
+
+- Produce an **Axis Table** with **6–10** high-leverage axes that would **materially change the plan** (architecture, contracts, core representation, orchestration shape, or external integration boundary).
+
+- For each axis, list **2–3 concrete options** and mark it as one of: **vary now** or **defer**.
+
+- Avoid “easy knob” axes (window size, thresholds, temperatures, retry counts, etc.) unless the spec makes them a hard contract requirement.
+
+- Select **2–4 “vary now” axes** to enforce coverage on for this run.
+
+  
+
+### Step 1: Parallel Attempts with Coverage Forcing
+
+- Generate **N** full attempts (plans or implementations), where each attempt:
+
+  - Commits to **one option per “vary now” axis** (no placeholders).
+
+  - Differs from every other attempt on **at least 2 “vary now” axes** (or **1** if only 1 axis is marked “vary now”).
+
+- Across the set, enforce coverage: every “vary now” axis must take **at least 2 different options** across the attempts.
+
+- If coverage fails, **regenerate** by either choosing better axes/options or increasing **N**.
+
+  
+
+### Step 2: Anti-Handwaving Rule
+
+- Attempts must not use “generic adapter” language to avoid committing to an option.
+
+- If multi-provider support is not explicitly in scope, each attempt should pick **one concrete integration path** and treat everything else as configuration or out-of-scope follow-on work.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
