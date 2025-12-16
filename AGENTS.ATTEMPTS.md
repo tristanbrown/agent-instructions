@@ -3,6 +3,55 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+When we want multiple attempts/plans/versions, use this protocol *before* generating them.
+
+### Goal
+Ensure the attempts diverge on the **few high-impact architectural decisions** implied by the spec, while keeping low-impact details stable and avoiding combinatorial explosion.
+
+### Step 1: Identify candidate axes
+Generate a short list of candidate axes (typically 6–12). Each axis must:
+- Be a real decision that changes **architecture, public API, data contracts, stage ordering, or test fixtures**.
+- Have 2–4 plausible options (not something already dictated by the spec).
+- Be phrased as a decision question (e.g., "How do we represent X?", not "What should we name X?").
+
+For each axis, list:
+- **Axis:** the decision question
+- **Options:** 2–4 plausible choices
+- **Why it matters:** 1 line describing the structural impact
+- **Decide vs defer:** `Must decide for v1` or `Can defer`, with a 1-line reason
+
+### Step 2: Select the variation axes (keep it minimal)
+From the candidates, select a minimal set of axes to actively vary across attempts (typically 3–6).
+- Prefer axes that are **high uncertainty**, **high leverage**, or **costly to change later**.
+- Explicitly mark the rest as **Fixed** (spec-dictated) or **Deferred** (decide later with a trigger).
+
+### Step 3: Create an "Axis Variation Contract"
+Before generating attempts, define a contract that maps axes/options onto attempts:
+- Each `Must decide for v1` axis should have **at least 2 distinct options represented across attempts** (as the number of attempts allows).
+- Avoid varying every axis in every attempt. Prefer:
+  - **One primary axis** that differentiates each attempt.
+  - At most **one secondary axis** that varies occasionally.
+  - Everything else uses a stated default.
+- Do **not** attempt full cross-product coverage.
+
+Output format can be a compact table/list, e.g.:
+- `Axis -> default -> Attempt A/B/C/D choices`
+
+### Step 4: Make the axes visible inside each attempt
+At the top of each attempt/plan, include a brief "Axis Decisions" section:
+- For each selected axis: `Chosen: <option>` (or `Deferred: <trigger to decide>`).
+- If an axis is deferred, the attempt must still remain **implementable and testable** (e.g., pick one concrete reference backend even if the boundary is generic).
+
+### Guardrails (what is NOT an axis)
+Do not treat these as axes unless the spec explicitly makes them central:
+- Naming, folder layout, formatting, or minor library choices.
+- Production/ops/instrumentation features (auth, hosting, logging, deployment, monitoring, scaling, etc.).
+- UI/interface modality changes (CLI vs web vs API), unless explicitly requested.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
