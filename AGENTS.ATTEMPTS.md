@@ -3,6 +3,19 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+Use this before generating parallel attempts or interactive strategies to ensure the important axes are varied and low-value ones stay fixed.
+- **Draft a Decision Axes Checklist**: list the few high-impact axes (e.g., primary model/provider, context limits, tool-calling schema style, hosting mode). Mark each as "must decide upfront" or "can defer."
+- **Fix low-impact defaults**: hold minor details constant across attempts unless explicitly requested.
+- **Enforce divergence**: require every attempt to vary at least one high-impact axis; reject attempts that only reshuffle low-impact details.
+- **Cap variation**: allow only 1-2 high-impact axes to vary per attempt to avoid combinatorial noise.
+- **Gate before detailing**: do not write detailed steps until the chosen axes per attempt are stated; if missing, ask for them or restate assumptions.
+- **Lock a primary target early**: pick a primary axis value (e.g., main model family) that all attempts must support; secondary options are optional and limited to one similar variant.
+- **Post-selection refinement**: after choosing a winning attempt, you may reintroduce one deferred axis if needed, but keep the core path fixed.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
