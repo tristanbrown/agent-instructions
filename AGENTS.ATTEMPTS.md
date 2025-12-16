@@ -3,6 +3,18 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+- Before drafting multiple attempts, pause to identify the few **high-impact axes of variation** that steer your architecture (examples: LLM provider choice, data modeling strategy, deployment surface, orchestration style).  
+- For each axis:
+  - Briefly describe why it matters (effects on downstream stages or trade-offs).
+  - Pinpoint what information or decision inputs would allow you to resolve it.
+  - Label whether the axis must be decided **before planning**, can wait **between stages**, or can be deferred **until implementation**.
+- Record these axes outside the plan document (e.g., a decision log or margin note) so every plan references the same set of unresolved stakes.  
+- Only once the axes are understood should you generate the parallel attempts, ensuring each plan takes a distinct stance on at least one high-impact axis while keeping other axes consistent or explicitly marked as deferred.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
