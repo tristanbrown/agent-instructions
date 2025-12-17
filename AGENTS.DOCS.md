@@ -3,6 +3,12 @@
 
 ---
 
+## Purpose
+
+This doc defines the standards for agent-written documents: how to structure them, the appropriate level of detail, and what to avoid. It applies to all planning, spec, protocol, and strategy docs unless overridden by task-specific rules.
+
+---
+
 ## Good Practices
 
 ### Structure
@@ -16,10 +22,12 @@
 - Delete anything that does not change a decision or action.
 - Prefer the shortest wording that stays unambiguous.
 
+---
+
 ## Failure Modes
 
 ### Overcomplication
-- Turning a short doc into a workflow.
+- Turning a short doc into a workflow or procedure.
 - Adding structure that creates busywork.
 - Adding sections that do not change outcomes.
 - Rules with caveats and exceptions are **bad rules!**
