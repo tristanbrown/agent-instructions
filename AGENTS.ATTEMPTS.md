@@ -3,18 +3,16 @@
 
 ---
 
-
 ## Axis of Variation Discovery Protocol
 
 Before generating parallel or iterative attempts:
 - Identify the **key strategic axes** that would most meaningfully differentiate implementations.
 - Label each axis by **variation role**:
-  - **Fixed upfront**: must be decided before planning.
-  - **Varied across attempts**: each attempt takes a different stance.
-  - **Deferred**: keep a minimal seam and decide later.
+  - **Decide upfront**: must be decided interactively before agentic planning.
+  - **Vary across attempts**: critical design choices worth exploring across attempts.
+  - **Deferred**: can be abstracted or mocked without blocking a concrete plan
 - For each axis, include a **one-line rationale** for the label.
-- Use this list to enforce variation: each attempt must take a distinct stance on at least one **Varied across attempts** axis, or explicitly fix it and say why.
-- If no **Varied across attempts** axes are identified, ask for clarification before proceeding.
+- If no **Vary across attempts** axes are identified, ask for clarification before proceeding.
 
 ---
 
