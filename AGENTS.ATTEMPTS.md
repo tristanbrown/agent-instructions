@@ -3,6 +3,34 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+Use this protocol before generating multiple attempts when the important variation axes are unclear or underspecified.
+
+1. **List candidate axes of variation**
+   - Identify 3-7 major decision axes that materially change architecture or implementation plan shape.
+   - Prefer high-impact axes (core abstractions, data model, integration strategy) over minor details.
+
+2. **Classify each axis**
+   - **Fixed upfront**: must be decided before planning.
+   - **Varied across attempts**: each attempt must take a different stance.
+   - **Deferred**: keep a minimal seam and defer the decision.
+
+3. **Constrain the variation budget**
+   - Vary only 2-3 axes across attempts.
+   - Hold everything else constant to avoid combinatorial noise.
+
+4. **Confirm with the user**
+   - Present the axis list and classifications briefly.
+   - Do not proceed with attempts until the user confirms or edits the list.
+
+5. **Enforce during plan writing**
+   - Each attempt must explicitly state its stance on the varied axes.
+   - Any axis marked Fixed must not diverge across attempts.
+   - Any axis marked Deferred must include a minimal seam and a note for later decision.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
