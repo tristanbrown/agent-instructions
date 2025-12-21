@@ -3,6 +3,21 @@
 
 ---
 
+
+## Axis of Variation Discovery Protocol
+
+Before generating parallel or iterative attempts:
+- Identify the **key strategic axes** that would most meaningfully differentiate implementations.
+- Label each axis by **decision timing**:
+  - **Decide now**: hard to change later or shapes downstream choices.
+  - **Defer**: can be abstracted or mocked without blocking a concrete plan.
+  - **Out of scope**: not addressed in this round of attempts.
+- For each axis, include a **one-line rationale** for the label.
+- Use this list to enforce variation: each attempt must vary at least one **Decide now** axis, or explicitly fix it and say why.
+- If no **Decide now** axes are identified, ask for clarification before proceeding.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
