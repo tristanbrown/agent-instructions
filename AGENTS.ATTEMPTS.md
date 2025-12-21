@@ -3,6 +3,55 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+Use this protocol when generating multiple plans/attempts, to ensure attempts vary along **high-leverage architectural axes** (not trivia) and avoid converging on the same default decisions.
+
+### Step 0: Understand the assignment (once)
+- Reuse the single "Understand the Assignment" pass from the planning workflow.
+- Do not start axis discovery until the user confirms the understanding is correct.
+
+### Step 1: Enumerate candidate axes
+- List the decisions that most affect:
+  - Core abstractions and interfaces
+  - Data contracts and persistence shape
+  - Feasibility, cost, or performance constraints
+  - Irreversibility (expensive to change later)
+- Exclude:
+  - Any spec-mandated constraints (these must be pinned)
+  - Forbidden differentiators (ops/productionization and UI type)
+  - Low-impact choices (naming, formatting, minor library preferences)
+
+### Step 2: Propose what to vary vs pin
+- Propose a small set of axes to vary across attempts (high impact + plausible alternatives).
+- Explicitly list what will be pinned across all attempts:
+  - Spec constraints and must/forbidden rules
+  - Any assumptions required for comparability
+  - Anything the user does not want to spend attention on
+
+### Step 3: Define axis options and decision timing
+For each selected axis:
+- Provide a short set of mutually exclusive options (phrased at the strategy level).
+- Mark the axis as either:
+  - **Decide now:** must be fixed to write an executable, stagewise plan.
+  - **Defer with a seam:** can be postponed, but each attempt must still choose a concrete **reference path** so stages remain runnable, and must define the minimal contract at the seam.
+
+### Step 4: Build an attempt matrix (strategy cards)
+- Create one strategy card per attempt: a 1–2 sentence description that names the chosen option for each varied axis.
+- Keep all pinned decisions identical across cards.
+- Ensure cards are meaningfully different because of the axes (not extra features).
+
+### Step 5: Axis audit (before writing full plans)
+- Verify every selected axis actually varies across attempts (no silent defaults).
+- Verify no attempt depends on an unspecified external choice to be actionable.
+- If a critical axis is unvaried, either vary it or explicitly justify why it is pinned.
+
+### Step 6: Expand into full plans (Parallel or Interactive)
+- **Parallel:** expand each strategy card into a full, self-contained plan.
+- **Interactive:** present the strategy cards for accept/reject first; only expand into plans after the set of cards is approved.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
