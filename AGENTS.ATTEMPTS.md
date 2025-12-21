@@ -8,13 +8,13 @@
 
 Before generating parallel or iterative attempts:
 - Identify the **key strategic axes** that would most meaningfully differentiate implementations.
-- Label each axis by **decision timing**:
-  - **Decide now**: hard to change later or shapes downstream choices.
-  - **Defer**: can be abstracted or mocked without blocking a concrete plan.
-  - **Out of scope**: not addressed in this round of attempts.
+- Label each axis by **variation role**:
+  - **Fixed upfront**: must be decided before planning.
+  - **Varied across attempts**: each attempt takes a different stance.
+  - **Deferred**: keep a minimal seam and decide later.
 - For each axis, include a **one-line rationale** for the label.
-- Use this list to enforce variation: each attempt must vary at least one **Decide now** axis, or explicitly fix it and say why.
-- If no **Decide now** axes are identified, ask for clarification before proceeding.
+- Use this list to enforce variation: each attempt must take a distinct stance on at least one **Varied across attempts** axis, or explicitly fix it and say why.
+- If no **Varied across attempts** axes are identified, ask for clarification before proceeding.
 
 ---
 
