@@ -3,6 +3,33 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+Use this protocol before generating multiple attempts, to ensure the right things vary and the wrong things do not.
+
+1. **List candidate axes**
+   - Identify the meaningful architectural or conceptual choices that could reasonably differ.
+   - Avoid trivial or cosmetic details (naming, logging style, error phrasing, minor param tweaks).
+
+2. **Classify each axis**
+   - **Must-Vary**: critical design choices worth exploring across attempts.
+   - **Fixed**: choices that must remain consistent across all attempts.
+   - **Deferred**: choices to postpone; attempts should include only a minimal seam or placeholder.
+
+3. **Declare attempt matrix**
+   - Choose 2-4 Must-Vary axes to explore.
+   - Assign each attempt a distinct combination of those axes.
+   - Explicitly list Fixed and Deferred axes to prevent accidental drift.
+
+4. **Enforce during generation**
+   - Each attempt must vary only its assigned axes.
+   - Deferred axes must not grow into full abstractions; keep them as thin seams or TBD notes.
+
+5. **Selection gate**
+   - After attempts are generated, pick the best one before resolving Deferred axes.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
