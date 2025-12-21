@@ -3,6 +3,37 @@
 
 ---
 
+## Axis of Variation Discovery Protocol
+
+When asked to generate parallel or iterative attempts (plans or implementations), do this **before** generating any attempts.
+
+**Goal:** Identify the small set of strategic “axes of variation” that meaningfully differentiate implementations, and label **when** each axis should be decided.
+
+### Step 0: Discover axes
+- Read the spec and constraints.
+- List only axes that would change architecture, core abstractions, or stage ordering.
+- Ignore trivial parameter choices unless they cause downstream lock-in.
+
+### Step 1: Label decision timing
+For each axis, assign exactly one label:
+- **Decide Now (Plan-Locking):** Must be coherent across stages; changing later implies rewrites.
+- **Decide After Spike (Empirical):** Depends on observed behavior; plan an early spike stage to validate.
+- **Decide Later (Plug/Config):** Safe to defer; keep it parameterized and swappable.
+- **Out of Scope:** Explicitly deferred beyond the current plan/attempt set.
+
+### Step 2: Confirm before attempts
+- Present the axes + labels (and any key assumptions) as part of the one-time “Understand the Assignment” check.
+- Do not generate attempts until the user confirms (or explicitly instructs you to proceed with assumptions).
+
+### Step 3: Enforce axis discipline in attempts
+Each attempt must start by stating:
+- Which axes it **varies** vs **holds constant**.
+- Which axes it **defers** and what stage triggers the decision (if any).
+
+Attempts should prioritize varying **Decide Now** axes, and avoid varying **Decide Later** axes unless requested.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
