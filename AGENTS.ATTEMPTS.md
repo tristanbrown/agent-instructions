@@ -3,6 +3,48 @@
 
 ---
 
+
+## Axis of Variation Discovery Protocol
+
+Use this protocol **before** generating parallel or iterative attempts, to ensure attempts vary along the axes that most meaningfully differentiate implementations.
+
+### Step 0: Identify strategic axes (once)
+
+From the spec and constraints, list the **smallest** set of high-leverage “axes of variation” that would materially change:
+- Architecture or core abstractions
+- Data contracts or intermediate representations
+- Failure modes and validation strategy
+- Performance/latency characteristics
+
+Exclude low-leverage axes (naming, file layout, minor helper utilities, etc.).
+
+### Step 1: Assign a decision timing label
+
+For each axis, label when it should be decided:
+- **Commit-now:** Must be fixed to write a coherent plan and stable contracts.
+- **Commit-after-spike:** Depends on empirical behavior; requires a short experiment to decide.
+- **Defer:** Can remain flexible behind a stable internal interface without distorting the plan.
+
+For **Commit-after-spike** and **Defer**, include a one-line **decision gate** describing what will trigger the decision.
+
+### Step 2: Choose which axes may vary across attempts
+
+Select which axes are allowed to differ between attempts:
+- Prefer varying **Commit-now** axes (these are what plans should help you choose).
+- Allow varying **Commit-after-spike** axes only if the attempt explicitly includes the spike and its decision gate.
+- Do not vary **Defer** axes unless the spec explicitly requires it.
+
+### Step 3: Enforce axis commitments in each attempt
+
+Each attempt must start with a short **Axis Commitments** section that:
+- States its choices for all **Commit-now** axes.
+- States its spike + decision gate for **Commit-after-spike** axes.
+- States the stable interface boundary (what is kept constant) for **Defer** axes.
+
+Attempts must not “silently default” a high-leverage axis; if it is not decided, it must be labeled and gated.
+
+---
+
 ## Parallel Attempt Generation Protocol
 
 When asked to plan or produce multiple “attempts” or versions:
