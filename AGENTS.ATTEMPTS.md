@@ -7,7 +7,9 @@
 
 Before generating parallel or iterative attempts:
 - Discover design axes.
-  - Analyze the spec for design decisions that could meaningfully alter implementation behavior.
+  - Analyze the spec for design decisions that could meaningfully alter implementation. 
+  - This includes choices of tools and external libraries that the strategy relies on.
+  - Also include different approaches to abstraction and modularity.
   - Do not assume all relevant decisions are explicitly stated.
   - Surface any strategic choices the spec depends on, even if they are not stated.
 
