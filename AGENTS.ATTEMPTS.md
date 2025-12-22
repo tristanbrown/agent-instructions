@@ -9,6 +9,7 @@ From a given spec doc, generate N parallel skeleton spikes.
 
 Definition:
 - A skeleton spike is a shallow, boundary-spanning, disposable implementation whose purpose is to force concrete architectural commitments.
+- It defines the minimal set of modules, interfaces, and constructor signatures required to implement a spec.
 
 Constraints:
 - Each spike must make different concrete architectural choices wherever the spec is ambiguous.
