@@ -3,6 +3,29 @@
 
 ---
 
+## Skeleton Spike Protocol
+
+From a given spec doc, generate N parallel skeleton spikes.
+
+Definition:
+- A skeleton spike is a shallow, boundary-spanning, disposable implementation whose purpose is to force concrete architectural commitments.
+
+Constraints:
+- Each spike must make different concrete architectural choices wherever the spec is ambiguous.
+- Spikes must define concrete components that correspond to responsibilities or boundaries implied by the spec.
+- Components may declare ownership of responsibilities but must not implement substantive behavior for those responsibilities.
+- Role-only abstractions that defer commitment are not allowed.
+- Code does not need to run or be complete.
+- No TODOs.
+- No explanatory comments or design narration.
+- No attempt at refactoring, reuse, optimization, or cleanliness.
+
+Output:
+- One code artifact per spike.
+- No prose, commentary, or comparison.
+
+---
+
 ## Axis of Variation Discovery Protocol
 
 Before generating parallel or iterative attempts:
