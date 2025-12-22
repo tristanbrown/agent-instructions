@@ -6,13 +6,26 @@
 ## Axis of Variation Discovery Protocol
 
 Before generating parallel or iterative attempts:
-- Identify the **key strategic axes** that would most meaningfully differentiate implementations.
-- Label each axis by **variation role**:
-  - **Decide upfront**: must be decided interactively before agentic planning.
-  - **Vary across attempts**: critical design choices worth exploring across attempts.
-  - **Deferred**: can be abstracted or mocked without blocking a concrete plan
-- For each axis, include a **one-line rationale** for the label.
-- If no **Vary across attempts** axes are identified, ask for clarification before proceeding.
+- Discover design axes.
+  - Analyze the spec for design decisions that could meaningfully alter implementation behavior.
+  - Do not assume all relevant decisions are explicitly stated.
+  - Surface any strategic choices the spec depends on, even if they are not stated.
+
+- For each axis, assign exactly one variation role:
+
+  **Decide Upfront:**
+  Choices that should be discussed and decided interactively, rather than independently selected across parallel attempts, because mixing them would make different versions uncomparable.
+
+  **Vary Across Attempts:**
+  Choices that can be independently selected in different attempts, where different architectures, tools, and approaches can be evaluated and compared.
+
+  **Deferred:**
+  Choices that can be stubbed, simplified, or postponed without constraining later decisions or architectures.
+
+- Use the Decide Upfront role sparingly: Only when the decision would reshape all parallel attempts.
+- For each axis, define the available choices, and include a one line rationale explaining why the assigned role is appropriate.
+- Present the results in plain markdown, such that they are legible in raw form.
+- Please stay concise!
 
 ---
 
