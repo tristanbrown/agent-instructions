@@ -6,12 +6,8 @@
 ## Axes of Variation Discovery (Creative Stack)
 
 ### Goal
-Axis discovery is not about enumerating all options.
-It is about maximizing coverage of **orthogonal ways the design space can bend** before early commitments collapse it.
-
-### Core rule
-Do not use a single brainstorm pass.
-Run **separate generator passes** and merge the results.
+Axis discovery surfaces **orthogonal axes of variation** in a spec before commitments, constraints, or structure collapse the space.
+It's not an exhaustive list of parameters.
 
 ---
 
@@ -20,21 +16,21 @@ Run **separate generator passes** and merge the results.
 ### Step 1: Run axis generators (independent prompts)
 Run each generator as its own prompt/pass. They are not sequential steps; do not "chain" results.
 
-#### Generator A: Conceptual inversion
+#### Generator A: Conceptual Inversion
 Prompt:
 - "If this system were designed with the **opposite priorities**, what would change?"
 
 Extraction rule:
 - Turn each thing that would change under opposite priorities into one or more axes.
 
-#### Generator B: Responsibility reassignment
+#### Generator B: Responsibility Reassignment
 Prompt:
 - "Which object **owns** this decision or transformation instead?"
 
 Extraction rule:
 - Turn each ownership shift into an axis about **where the boundary lives**.
 
-#### Generator C: Failure-mode-first enumeration
+#### Generator C: Failure-Mode-First Enumeration
 Prompt:
 - "How could this go wrong in ways that **force a redesign**?"
 
@@ -42,17 +38,17 @@ Extraction rule:
 - Enumerate distinct failure modes (stress cases) as outputs.
 - Do not try to solve the failures here! Only identify the axes that lead into failures!
 
-#### Generator D: Analogy hopping
+#### Generator D: Analogy Hopping
 Prompt:
 - "What existing systems solve a similar problem differently?"
 
 Extraction rule:
-- For each analogy, translate how that system solves the problem differently into axes for the current system.
+- For each analogy, translate the different approaches of that system into axes for the current system.
 
 ### Step 2: Merge and normalize
 - Merge outputs across generators.
 - Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
-- Drop axes that only vary superficial implementation detail.
+- Drop axes that only vary superficial parameters.
 
 ### Step 3: Classify each axis by decision class (and pick resolution)
 Assign exactly one decision class per axis:
@@ -63,7 +59,7 @@ Assign exactly one decision class per axis:
 
 **Structural Uncertainty**
 - Question: "What shapes even exist, and which ones survive contact with reality?"
-- Resolution: skeleton spikes (shape probes).
+- Resolution: Skeleton Spikes (shape probes).
 
 **Mechanism Uncertainty**
 - Question: "Which mechanism works better once structure is fixed?"
@@ -71,11 +67,11 @@ Assign exactly one decision class per axis:
 
 **External Capability Uncertainty**
 - Question: "What do our tools/models actually do well or poorly?"
-- Resolution: targeted probes / one-shot trials.
+- Resolution: targeted, depth-first probes / one-shot trials.
 
 **Noise / Premature Optimization**
 - Question: "This feels like a decision, but probably isn't yet."
-- Resolution: explicit deferral (with a reminder trigger).
+- Resolution: explicit deferral.
 
 ---
 
