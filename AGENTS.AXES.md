@@ -30,7 +30,7 @@ Prompt:
 - "If this system were designed with the **opposite priorities**, what would change?"
 
 How to use:
-- Identify stated and implied priorities (simplicity vs power, local vs global, eager vs lazy, immutable vs mutable, etc.).
+- Identify stated and implied priorities.
 - Flip them deliberately, then extract the resulting decisions as axes.
 
 ### Step 2: Responsibility reassignment (structure generator)
@@ -39,7 +39,7 @@ Prompt:
 
 How to use:
 - Locate key transformations/decisions in the spec.
-- Reassign ownership across boundaries (core vs edge, producer vs consumer, caller vs callee, user vs system).
+- Reassign ownership across boundaries and layers.
 - Convert each reassignment into an axis about **where the boundary lives**.
 
 ### Step 3: Failure-mode-first enumeration (stress generator)
@@ -48,20 +48,20 @@ Prompt:
 
 How to use:
 - Enumerate plausible failure modes, then ask: "What architectural choice would make this failure easy vs hard?"
-- Convert each such choice into an axis (retries, ordering, idempotency, drift, partial failure, etc.).
+- Convert each such choice into an axis.
 
 ### Step 4: Analogy hopping (late-stage broadener)
 Prompt:
 - "What existing systems solve a similar problem differently?"
 
 How to use:
-- Name 3-5 analog domains and import their structural primitives.
-- Translate the imported alternative decomposition into axes (compiler pass vs pipeline, diff/patch vs event log, stream vs batch, etc.).
+- Name a few analog domains and import their structural primitives.
+- Translate the imported alternative decomposition into axes.
 
 ### Step 5: Merge and normalize
 - Merge scratchpad outputs across generators.
 - Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
-- Drop axes that only vary superficial implementation detail (rename, minor library swaps without architectural consequence).
+- Drop axes that only vary superficial implementation detail.
 
 ### Step 6: Classify each axis by decision class (and pick resolution)
 Assign exactly one decision class per axis:
@@ -74,7 +74,7 @@ Assign exactly one decision class per axis:
 - Question: "What shapes even exist, and which ones survive contact with reality?"
 - Resolution: skeleton spikes (shape probes).
 
-**Algorithmic Uncertainty**
+**Mechanism Uncertainty**
 - Question: "Which mechanism works better once structure is fixed?"
 - Resolution: compare mechanisms within one fixed structure (local experimentation).
 
