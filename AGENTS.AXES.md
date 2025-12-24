@@ -48,7 +48,6 @@ Extraction rule:
 ### Step 2: Merge and normalize
 - Merge outputs across generators.
 - Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
-- Drop axes that only vary superficial parameters.
 
 ### Step 3: Classify each axis by decision class (and pick resolution)
 Assign exactly one decision class per axis:
@@ -63,10 +62,10 @@ Assign exactly one decision class per axis:
 
 **Mechanism Uncertainty**
 - Question: "Which mechanism works better once structure is fixed?"
-- Resolution: compare mechanisms within one fixed structure (local experimentation).
+- Resolution: compare mechanisms within one fixed structure (parallel implementations).
 
 **External Capability Uncertainty**
-- Question: "What do our tools/models actually do well or poorly?"
+- Question: "What do the available tools actually do well or poorly?"
 - Resolution: targeted, depth-first probes / one-shot trials.
 
 **Noise / Premature Optimization**
