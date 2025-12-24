@@ -30,7 +30,7 @@ Prompt:
 - "If this system were designed with the **opposite priorities**, what would change?"
 
 How to use:
-- Identify implied priorities (simplicity vs power, local vs global, eager vs lazy, immutable vs mutable, etc.).
+- Identify stated and implied priorities (simplicity vs power, local vs global, eager vs lazy, immutable vs mutable, etc.).
 - Flip them deliberately, then extract the resulting decisions as axes.
 
 ### Step 2: Responsibility reassignment (structure generator)
@@ -63,19 +63,28 @@ How to use:
 - Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
 - Drop axes that only vary superficial implementation detail (rename, minor library swaps without architectural consequence).
 
-### Step 6: Classify each axis by variation role
-Assign exactly one role per axis:
+### Step 6: Classify each axis by decision class (and pick resolution)
+Assign exactly one decision class per axis:
 
-**Decide Upfront**
-- Must be aligned interactively because mixing choices would make attempts incomparable or invalidate shared evaluation.
+**Value Judgment**
+- Question: "Which outcome do we want?"
+- Resolution: interactive discussion (humans decide).
 
-**Vary Across Attempts**
-- Safe to select independently per attempt; differences remain comparable and evaluable.
+**Structural Uncertainty**
+- Question: "What shapes even exist, and which ones survive contact with reality?"
+- Resolution: skeleton spikes (shape probes).
 
-**Deferred**
-- Can be stubbed or postponed without constraining later architectural choices.
+**Algorithmic Uncertainty**
+- Question: "Which mechanism works better once structure is fixed?"
+- Resolution: compare mechanisms within one fixed structure (local experimentation).
 
-Keep **Decide Upfront** sparse: only for decisions that reshape all variants.
+**External Capability Uncertainty**
+- Question: "What do our tools/models actually do well or poorly?"
+- Resolution: targeted probes / one-shot trials.
+
+**Noise / Premature Optimization**
+- Question: "This feels like a decision, but probably isn't yet."
+- Resolution: explicit deferral (with a reminder trigger).
 
 ---
 
@@ -85,6 +94,6 @@ Keep **Decide Upfront** sparse: only for decisions that reshape all variants.
   - `Axis:` ...
   - `Question:` ...
   - `Poles:` ...
-  - `Role:` Decide Upfront | Vary Across Attempts | Deferred
+  - `Decision Class:` Value Judgment | Structural Uncertainty | Mechanism Uncertainty | External Capability Uncertainty | Noise / Premature Optimization
+  - `Resolution:` Interactive discussion | Skeleton spikes | Local experimentation | Targeted probe | Defer
   - `Impact:` ...
-
