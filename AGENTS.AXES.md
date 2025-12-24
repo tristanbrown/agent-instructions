@@ -77,9 +77,4 @@ Assign exactly one decision class per axis:
 
 ## Output format
 - Plain markdown.
-- One axis per bullet, using this schema:
-  - `Axis:` ...
-  - `Question:` ...
-  - `Decision Class:` Value Judgment | Structural Uncertainty | Mechanism Uncertainty | External Capability Uncertainty | Noise / Premature Optimization
-  - `Resolution:` Interactive discussion | Skeleton spikes | Local experimentation | Targeted probe | Defer
-  - `Impact:` ...
+- One axis per bullet, assigned to Decision Class categories
