@@ -17,14 +17,6 @@ Run **separate generator passes** and merge the results.
 
 ## Protocol
 
-### Step 0: Setup (from the spec)
-- Extract the spec's **invariants** (requirements that must not change across variants).
-- Create an "Axis Scratchpad" and capture candidate axes as:
-  - **Axis:** short name
-  - **Question:** what decision is being made?
-  - **Poles:** the concrete alternatives
-  - **Impact:** what would change if you flipped poles? (1 line)
-
 ### Step 1: Run axis generators (independent prompts)
 Run each generator as its own prompt/pass. They are not sequential steps; do not "chain" results mid-pass.
 
@@ -57,7 +49,7 @@ Extraction rule:
 - Import an alternative decomposition from the analogy, then translate it into axes.
 
 ### Step 2: Merge and normalize
-- Merge scratchpad outputs across generators.
+- Merge outputs across generators.
 - Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
 - Drop axes that only vary superficial implementation detail.
 
