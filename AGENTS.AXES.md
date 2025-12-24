@@ -18,18 +18,18 @@ Run **separate generator passes** and merge the results.
 ## Protocol
 
 ### Step 1: Run axis generators (independent prompts)
-Run each generator as its own prompt/pass. They are not sequential steps; do not "chain" results mid-pass.
+Run each generator as its own prompt/pass. They are not sequential steps; do not "chain" results.
 
 #### Generator A: Conceptual inversion
 Prompt:
 - "If this system were designed with the **opposite priorities**, what would change?"
 
 Extraction rule:
-- Turn each flipped priority into one or more axes.
+- Turn each thing that would change under opposite priorities into one or more axes.
 
 #### Generator B: Responsibility reassignment
 Prompt:
-- "Who **owns** this decision or transformation instead?"
+- "Which object **owns** this decision or transformation instead?"
 
 Extraction rule:
 - Turn each ownership shift into an axis about **where the boundary lives**.
@@ -40,13 +40,14 @@ Prompt:
 
 Extraction rule:
 - Enumerate distinct failure modes (stress cases) as outputs.
+- Do not try to solve the failures here! Only identify the axes that lead into failures!
 
 #### Generator D: Analogy hopping
 Prompt:
 - "What existing systems solve a similar problem differently?"
 
 Extraction rule:
-- Import an alternative decomposition from the analogy, then translate it into axes.
+- For each analogy, translate how that system solves the problem differently into axes for the current system.
 
 ### Step 2: Merge and normalize
 - Merge outputs across generators.
