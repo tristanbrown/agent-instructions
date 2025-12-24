@@ -3,7 +3,7 @@
 
 ---
 
-## Axes of Variation Discovery (Creative Stack)
+## Axes of Variation Discovery (Creativity Stack)
 
 ### Goal
 Axis discovery surfaces **orthogonal axes of variation** in a spec before commitments, constraints, or structure collapse the space.

@@ -12,6 +12,7 @@ This repository uses layered agent instructions.
       - `AGENTS.PLANNING.md`: When we are discussing planning docs, creating implementation plans, or implementing code.
       - `AGENTS.ATTEMPTS.md`: When we are discussing, creating, or comparing multiple plan/code versions or parallel attempts.
       - `AGENTS.DOCS.md`: When writing .md docs.
+      - `AGENTS.AXES.md`: When explicitly referenced (then overrides `AGENTS.ATTEMPTS.md`).
 
 2. **Project-specific rules**
    - `AGENTS.PROJECT.md` at the project root contains rules unique to this repository.
