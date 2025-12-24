@@ -25,45 +25,43 @@ Run **separate generator passes** and merge the results.
   - **Poles:** the concrete alternatives
   - **Impact:** what would change if you flipped poles? (1 line)
 
-### Step 1: Conceptual inversion (primary generator)
+### Step 1: Run axis generators (independent prompts)
+Run each generator as its own prompt/pass. They are not sequential steps; do not "chain" results mid-pass.
+
+#### Generator A: Conceptual inversion
 Prompt:
 - "If this system were designed with the **opposite priorities**, what would change?"
 
-How to use:
-- Identify stated and implied priorities.
-- Flip them deliberately, then extract the resulting decisions as axes.
+Extraction rule:
+- Turn each flipped priority into one or more axes (with concrete poles).
 
-### Step 2: Responsibility reassignment (structure generator)
+#### Generator B: Responsibility reassignment
 Prompt:
 - "Who **owns** this decision or transformation instead?"
 
-How to use:
-- Locate key transformations/decisions in the spec.
-- Reassign ownership across boundaries and layers.
-- Convert each reassignment into an axis about **where the boundary lives**.
+Extraction rule:
+- Turn each ownership shift into an axis about **where the boundary lives**.
 
-### Step 3: Failure-mode-first enumeration (stress generator)
+#### Generator C: Failure-mode-first enumeration
 Prompt:
 - "How could this go wrong in ways that **force a redesign**?"
 
-How to use:
-- Enumerate plausible failure modes, then ask: "What architectural choice would make this failure easy vs hard?"
-- Convert each such choice into an axis.
+Extraction rule:
+- For each failure mode, derive the architectural choice that makes it easy vs hard, then record that choice as an axis.
 
-### Step 4: Analogy hopping (late-stage broadener)
+#### Generator D: Analogy hopping
 Prompt:
 - "What existing systems solve a similar problem differently?"
 
-How to use:
-- Name a few analog domains and import their structural primitives.
-- Translate the imported alternative decomposition into axes.
+Extraction rule:
+- Import an alternative decomposition from the analogy, then translate it into axes.
 
-### Step 5: Merge and normalize
+### Step 2: Merge and normalize
 - Merge scratchpad outputs across generators.
 - Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
 - Drop axes that only vary superficial implementation detail.
 
-### Step 6: Classify each axis by decision class (and pick resolution)
+### Step 3: Classify each axis by decision class (and pick resolution)
 Assign exactly one decision class per axis:
 
 **Value Judgment**
