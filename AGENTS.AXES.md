@@ -25,7 +25,7 @@ Prompt:
 - "If this system were designed with the **opposite priorities**, what would change?"
 
 Extraction rule:
-- Turn each flipped priority into one or more axes (with concrete poles).
+- Turn each flipped priority into one or more axes.
 
 #### Generator B: Responsibility reassignment
 Prompt:
@@ -39,7 +39,7 @@ Prompt:
 - "How could this go wrong in ways that **force a redesign**?"
 
 Extraction rule:
-- For each failure mode, derive the architectural choice that makes it easy vs hard, then record that choice as an axis.
+- Enumerate distinct failure modes (stress cases) as outputs.
 
 #### Generator D: Analogy hopping
 Prompt:
@@ -83,7 +83,6 @@ Assign exactly one decision class per axis:
 - One axis per bullet, using this schema:
   - `Axis:` ...
   - `Question:` ...
-  - `Poles:` ...
   - `Decision Class:` Value Judgment | Structural Uncertainty | Mechanism Uncertainty | External Capability Uncertainty | Noise / Premature Optimization
   - `Resolution:` Interactive discussion | Skeleton spikes | Local experimentation | Targeted probe | Defer
   - `Impact:` ...
