@@ -49,14 +49,19 @@ Prompt:
 Extraction rule:
 - For each analogy, translate the different approaches of that system into axes for the current system.
 
-### Step 2: Merge and normalize → write `axes.md`
-- Merge outputs across generators.
-- Deduplicate by collapsing synonymous axes, but keep any distinct options/variants (don’t “dedupe away” real choices).
-- In `axes.md`, each axis bullet must include the source IDs in brackets (e.g. `[A2, C4]`).
-- Completeness check: every `A# / B# / C# / D#` from `creativity.md` appears in at least one `axes.md` axis bullet.
+### Step 2: Classify by decision class first → write `axes.md` (unmerged)
+Rules:
+- Create/update `axes.md` by copying every axis bullet from `creativity.md` into exactly one Decision Class section.
+- Keep the ID at the end of the bullet (e.g. `… [A3]`).
+- Completeness check: every `A# / B# / C# / D#` from `creativity.md` appears in `axes.md`.
 
-### Step 3: Classify each axis by decision class (and pick resolution)
-Assign exactly one decision class per axis:
+### Step 3 (optional): Deduplicate axes within decision classes → update `axes.md`
+Rules:
+- **If** there are any duplicate axes **within the same Decision Class**, they may be merged.
+- **Never** merge across Decision Classes.
+- When merging, the resulting axis bullet must carry all contributing IDs (e.g. `… [A3, C7, D2]`).
+
+### Decision Classes (resolutions)
 
 **Value Judgment**
 - Question: "Which outcome do we want?"
@@ -71,7 +76,7 @@ Assign exactly one decision class per axis:
 - Resolution: compare mechanisms within one fixed structure (parallel implementations).
 
 **External Capability Uncertainty**
-- Question: "What do the available tools actually do well or poorly?"
+- Question: "What differences arise from selecting different external tools?"
 - Resolution: targeted, depth-first probes / one-shot trials.
 
 **Noise / Premature Optimization**
@@ -82,4 +87,5 @@ Assign exactly one decision class per axis:
 
 ## Output format
 - `creativity.md`: generator outputs with `A# / B# / C# / D#` IDs.
-- `axes.md`: one axis per bullet, assigned to Decision Class categories, with source IDs. Use markdown formatting for readability.
+- `axes.md`: one axis per bullet, assigned to Decision Class categories, with source IDs. 
+- **Readability** — Use markdown formatting for readability.
