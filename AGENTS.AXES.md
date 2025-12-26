@@ -87,4 +87,5 @@ Rules:
 ## Output format
 - `creativity.md`: generator outputs with `A# / B# / C# / D#` IDs.
 - `axes.md`: one axis per bullet, assigned to Decision Class categories, with source IDs. 
-- **Readability** — Use markdown formatting for readability.
+- [A#] Use markdown formatting like this for readability in creativity.md. 
+- **Readability** — Use markdown formatting like this for readability in axes.md. [A#]
