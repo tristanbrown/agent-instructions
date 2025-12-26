@@ -13,8 +13,12 @@ It's not an exhaustive list of parameters.
 
 ## Protocol
 
-### Step 1: Run axis generators (independent prompts)
+### Step 1: Run axis generators (independent prompts) → write `creativity.md`
 Run each generator as its own prompt/pass. They are not sequential steps; do not "chain" results.
+
+Rules:
+- Write generator outputs to `creativity.md` before doing any merge/classification.
+- In `creativity.md`, label each axis bullet with an ID: `A1…`, `B1…`, `C1…`, `D1…`.
 
 #### Generator A: Conceptual Inversion
 Prompt:
@@ -45,9 +49,11 @@ Prompt:
 Extraction rule:
 - For each analogy, translate the different approaches of that system into axes for the current system.
 
-### Step 2: Merge and normalize
+### Step 2: Merge and normalize → write `axes.md`
 - Merge outputs across generators.
-- Deduplicate by **collapsing synonymous axes** and splitting "combo axes" into atomic ones.
+- Deduplicate by collapsing synonymous axes, but keep any distinct options/variants (don’t “dedupe away” real choices).
+- In `axes.md`, each axis bullet must include the source IDs in brackets (e.g. `[A2, C4]`).
+- Completeness check: every `A# / B# / C# / D#` from `creativity.md` appears in at least one `axes.md` axis bullet.
 
 ### Step 3: Classify each axis by decision class (and pick resolution)
 Assign exactly one decision class per axis:
@@ -75,5 +81,5 @@ Assign exactly one decision class per axis:
 ---
 
 ## Output format
-- Plain markdown.
-- One axis per bullet, assigned to Decision Class categories
+- `creativity.md`: generator outputs with `A# / B# / C# / D#` IDs.
+- `axes.md`: one axis per bullet, assigned to Decision Class categories, with source IDs. Use markdown formatting for readability.
