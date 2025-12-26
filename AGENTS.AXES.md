@@ -51,15 +51,14 @@ Extraction rule:
 
 ### Step 2: Classify by decision class first → write `axes.md` (unmerged)
 Rules:
-- Create/update `axes.md` by copying every axis bullet from `creativity.md` into exactly one Decision Class section.
+- Create/update `axes.md` by copying every axis bullet from `creativity.md` into **at least** one Decision Class section.
 - Keep the ID at the end of the bullet (e.g. `… [A3]`).
 - Completeness check: every `A# / B# / C# / D#` from `creativity.md` appears in `axes.md`.
 
-### Step 3 (optional): Deduplicate axes within decision classes → update `axes.md`
+### Step 3: Reframe axes within decision classes → update `axes.md`
 Rules:
-- **If** there are any duplicate axes **within the same Decision Class**, they may be merged.
-- **Never** merge across Decision Classes.
-- When merging, the resulting axis bullet must carry all contributing IDs (e.g. `… [A3, C7, D2]`).
+- Axis definitions should be translated into the context of their decision class.
+- Do not lose the original parameters or ID label of each axis!
 
 ### Decision Classes (resolutions)
 
