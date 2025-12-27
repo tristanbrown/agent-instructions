@@ -18,7 +18,7 @@ Run each generator as its own prompt/pass. They are not sequential steps; do not
 
 Rules:
 - Write generator outputs to `creativity.md` before doing any merge/classification.
-- In `creativity.md`, label each axis bullet with an ID: `A1…`, `B1…`, `C1…`, `D1…`.
+- In `creativity.md`, label each axis bullet with an ID: [A#], [B#], [C#], [D#].
 
 #### Generator A: Conceptual Inversion
 Prompt:
@@ -52,8 +52,8 @@ Extraction rule:
 ### Step 2: Classify by decision class first → write `axes.md` (unmerged)
 Rules:
 - Create/update `axes.md` by copying every axis bullet from `creativity.md` into **at least** one Decision Class section.
-- Keep the ID at the end of the bullet (e.g. `… [A3]`).
-- Completeness check: every `A# / B# / C# / D#` from `creativity.md` appears in `axes.md`.
+- Keep the ID at the end of the bullet (e.g. [A3]).
+- Completeness check: every [A#], [B#], [C#], [D#] from `creativity.md` appears in `axes.md`.
 
 ### Step 3: Reframe axes within decision classes → update `axes.md`
 Rules:
@@ -67,7 +67,7 @@ Rules:
 - Resolution: interactive discussion (humans decide).
 
 **Structural Uncertainty**
-- Question: "What shapes even exist, and which ones survive contact with reality?"
+- Question: "What architectural shapes and objects even exist, and which ones survive contact with reality?"
 - Resolution: Skeleton Spikes (shape probes).
 
 **Mechanism Uncertainty**
@@ -76,6 +76,7 @@ Rules:
 
 **External Capability Uncertainty**
 - Question: "What differences arise from selecting different external tools?"
+- This category **MUST SPECIFICALLY LIST** cases where a choice between different external tools must be made.
 - Resolution: targeted, depth-first probes / one-shot trials.
 
 **Noise / Premature Optimization**
@@ -84,8 +85,15 @@ Rules:
 
 ---
 
-## Output format
-- `creativity.md`: generator outputs with `A# / B# / C# / D#` IDs.
+## Outputs
+- `creativity.md`: generator outputs with [A#], [B#], [C#], [D#] IDs.
 - `axes.md`: one axis per bullet, assigned to Decision Class categories, with source IDs. 
-- [A#] Use markdown formatting like this for readability in creativity.md. 
-- **Readability** — Use markdown formatting like this for readability in axes.md. [A#]
+
+## Formatting for Readability
+- [A#] Use markdown formatting like this for the bullet point lines in `creativity.md`. 
+- **Readability** — Use markdown formatting like this for the bullet point lines in `axes.md`. [A#]
+
+- **FOLLOW THE FORMATTING INSTRUCTIONS**. IF THE FORMATTING IS NOT CORRECT, GO BACK AND FIX IT!!!!!
+- CHECK THE FORMATTING AGAIN! IF YOU DID IT WRONG, FIX IT!!!
+- IF YOU DID THE FORMATTING WRONG, **FIX IT!!!**
+- IF YOU DID THE FORMATTING WRONG, I WILL MAKE YOU DO EVERYTHING ALL OVER AGAIN, AND YOU WILL BE WASTING CREDITS AND TIME!!! **FOLLOW MY INSTRUCTIONS**, OR EVERYTHING YOU DID IS **USELESS!!!**
