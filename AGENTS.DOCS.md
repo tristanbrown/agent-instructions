@@ -12,9 +12,13 @@ This doc defines the standards for agent-written documents: how to structure the
 ## Good Practices
 
 ### Structure
+- Preserve existing structure and tone unless asked.
 - Use clean, minimal Markdown.
 - Use headings, bullets, and numbered lists, not dense paragraphs.
 - Keep each section single-purpose.
+- Put new content in the appropriate section.
+- Add sections only for distinct topics.
+- Use an existing section when it fits.
 - **Bold text:** Useful as in-line headers.
 
 ### Conciseness
@@ -30,6 +34,7 @@ This doc defines the standards for agent-written documents: how to structure the
 - Turning a short doc into a workflow or procedure.
 - Adding structure that creates busywork.
 - Adding sections that do not change outcomes.
+- Reorganizing or replacing content without a clear need.
 - Rules with caveats and exceptions are **bad rules!**
 
 ### Overspecification
@@ -52,3 +57,5 @@ This doc defines the standards for agent-written documents: how to structure the
 - Deep nesting.
 - Overlapping sections.
 - Emphasis-heavy formatting that reduces skimmability.
+- Removing structure that improves readability.
+- Content placed under unrelated headings.
