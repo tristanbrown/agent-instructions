@@ -57,10 +57,10 @@ EXTREMELY STRICT RULE against premature productionization.
 - Assume all plans and implementations **MUST BE** UI-agnostic, exposed only as importable objects with method-based access, unless a **specific UI** is requested.
 
 ### Step 3: Quality Check
-- Go back and reevaluate the plan.
-- Do an audit against the constraints in the original spec.
-- If you find any point where the plan deviates from the spec, YOU MUST go back and revise the plan to match the spec. 
-- Don't give me violating plans! Fix the plan before presenting it to me!
+- Reevaluate the plan against the current agreed requirements.
+- Later confirmed decisions supersede conflicting earlier specs.
+- If a source doc is stale, update it when authorized or note the conflict; do not enforce superseded constraints.
+- Don't give me violating plans! Fix deviations before presenting it to me!
 
 ---
 
