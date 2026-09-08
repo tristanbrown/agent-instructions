@@ -6,7 +6,7 @@
 ## Rules
 
 - Use subagents only for the three purposes below.
-- The manager owns judgment, decisions, integration, and final output.
+- Subagents provide inputs; the manager owns judgment, integration, and final output within the user-directed workflow.
 - Do not hardcode model names; before any subagent work, confirm with the user which model will fill each role.
 - Do not spawn subagents for routine decomposition or convenience.
 
