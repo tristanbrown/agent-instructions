@@ -3,31 +3,37 @@
 
 This repository uses layered agent instructions.
 
-1. **Global rules**
-   - `.agents/README.md` is for humans, not agents.
-   - The `.agents/AGENTS.*.md` files define universal coding, workflow, and development rules shared across projects.
-   - To optimize token usage, some AGENTS files only need to be read in certain scenarios, and can be otherwise skipped. Follow this guide to choosing which AGENTS files to read and obey:
-      - `AGENTS.CODING.md`: When we are implementing code or creating implementation plans.
-      - `AGENTS.PLANNING.md`: When we are discussing planning docs, creating implementation plans, or implementing code.
-      - `AGENTS.DOCS.md`: When writing .md docs.
-      - `AGENTS.DESIGN.md`: When making design decisions, exploring alternatives, or generating parallel attempts.
-      - `AGENTS.AXES.md`: When explicitly using the full axes-of-variation workflow.
-      - `AGENTS.SUBAGENTS.md`: Before any subagent work.
+`.agents/README.md` is for humans, not agents.
 
-2. **Project-specific rules**
-   - `AGENTS.PROJECT.md` at the project root contains rules unique to this repository.
-   - Always read and obey `AGENTS.PROJECT.md`!
-   - When global and project rules conflict, the project rules take priority.
+## Routing
 
-3. **Local workspace rules**
-   - `AGENTS.LOCAL.md` may exist at the project root, containing rules unique to the local workspace.
-   - If `AGENTS.LOCAL.md` exists, always read and obey it!
-   - When conflicts arise, local rules take priority over both project and global rules.
+Before doing any work, load the instruction files that apply to the task:
 
----
+1. Read `AGENTS.PROJECT.md` at the project root in full. It contains rules and context unique to the repository and is required for every task.
+2. If `AGENTS.LOCAL.md` exists at the project root, read it in full. It contains rules unique to the local workspace.
+3. Read each applicable shared rule file from `.agents/`:
+   - `AGENTS.CODING.md`: When implementing code or creating implementation plans.
+   - `AGENTS.PLANNING.md`: When discussing planning documents, creating implementation plans, or implementing code.
+   - `AGENTS.DOCS.md`: When creating or editing Markdown documents.
+   - `AGENTS.DESIGN.md`: When making design decisions, exploring alternatives, or generating parallel attempts.
+   - `AGENTS.AXES.md`: When explicitly using the full axes-of-variation workflow.
+   - `AGENTS.SUBAGENTS.md`: Before any subagent work.
 
-## Interaction Flow
-1. Read the necessary `.agents/AGENTS.*.md` files for global rules.
-2. Then read `AGENTS.PROJECT.md` for repo-specific rules.
-3. Then read `AGENTS.LOCAL.md` for workspace-specific rules.
-4. If rules conflict, **user instructions override local rules, which override project-specific rules, which override global rules**.
+Read every file whose trigger applies. The routed files are cumulative, not alternatives.
+
+## Precedence and conflict resolution
+
+Apply all applicable instructions together. When two instructions cannot both be followed, use this precedence:
+
+1. `AGENTS.LOCAL.md`
+2. `AGENTS.PROJECT.md`
+3. Applicable shared `.agents/AGENTS.*.md` rule files
+
+Treat an override narrowly:
+
+- An override exists only when applicable instructions directly and irreconcilably conflict.
+- Higher-precedence instructions replace only the conflicting requirement. All other lower-precedence instructions remain in force.
+- Do not infer an override from silence, omission, greater specificity, later placement, or the task request alone.
+- If instructions at the same precedence conflict, or the intended scope of an override is ambiguous, stop before the affected work and ask the user to clarify.
+- If an apparent override would relax a prohibition, required approval, safety or privacy boundary, or scope restriction, and that relaxation is not explicit in the higher-precedence instruction, treat the override as ambiguous and ask the user to clarify the intended relationship before proceeding.
+- Clarification resolves ambiguity; it does not create an exception that no applicable instruction allows.
