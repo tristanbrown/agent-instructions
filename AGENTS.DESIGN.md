@@ -169,8 +169,9 @@ Describe for each version:
 
 ### Step 3: Recommend a path forward
 
-- Choose **one version to move forward with**, explaining why.
+- Recommend **one version as the strongest starting point**, explaining why.
 - Suggest any **specific improvements or elements** to pull in from other versions.
+- Leave selection, combination, synthesis, and further action to the user unless requested.
 
 ---
 
