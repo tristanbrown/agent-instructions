@@ -9,7 +9,8 @@ They define baseline coding style principles that apply everywhere.
 ## Coding Rules
 
 1. **Implement only what was requested**  
-   - Do not add unrequested features.  
+   - Apply YAGNI: do not add unrequested features or speculative flexibility.
+   - Apply KISS: use the simplest clear solution that meets current requirements.
    - Do not refactor without explicit instructions to do so.  
 
 2. **Comments**  
@@ -24,14 +25,13 @@ They define baseline coding style principles that apply everywhere.
    - Favor meaningful names for methods and variables so code is self-explanatory.  
 
 4. **DRY (Don’t Repeat Yourself)**  
-   - Do not duplicate logic.  
-   - Use abstraction and modularity to ensure a single source of truth for any piece of logic.  
+   - Consolidate repeated knowledge or behavior when one source improves maintainability.
+   - Do not abstract merely similar code without a stable shared concept.
 
 5. **Conciseness**  
-   - Prefer as few lines of code as possible, but no less.  
+   - Prefer simple, direct code that remains readable and easy to debug.
    - Avoid unnecessary boilerplate, wrappers, or abstractions that don’t add clarity.  
-   - Do not collapse too much logic into single lines if it reduces readability or makes debugging harder.  
-   - Simplify when possible, but not at the expense of readability.  
+   - Do not compress logic when it reduces readability.
 
 6. **Soundness over hacks**  
    - Do not use brittle or hacky workarounds.  
@@ -39,9 +39,10 @@ They define baseline coding style principles that apply everywhere.
    - If a proper solution is unclear, ask for clarification instead of guessing.  
 
 7. **Portability through modularity**  
-   - Structure logic into modules, functions, or classes that can be reused in multiple contexts.  
+   - Structure logic into focused modules, functions, or classes with clear boundaries.
    - Avoid embedding universal logic in places where it cannot be reused.  
-   - Portable logic should be clean, general, and free of project-specific assumptions unless explicitly required.  
+   - Portable logic should be clean, general, and free of project-specific coupling. 
+   - Use portability as a test of modularity, not as a reason for speculative generalization. 
 
 8. **Separation of concerns**  
    - Keep distinct layers of the codebase isolated:  
@@ -52,15 +53,17 @@ They define baseline coding style principles that apply everywhere.
    - Cross-layer dependencies should be minimal, explicit, and well-defined.  
 
 9. **Consistency and consolidation**  
-   - Reuse existing logic and abstractions whenever possible.  
-   - Do not reimplement similar solutions in multiple places; abstract them into a single, universal form.  
-   - Introducing new patterns is welcome if they clearly improve clarity, adaptability, or replace outdated/messy approaches.  
+   - Reuse existing logic and abstractions whenever possible.
+   - Consolidate similar solutions when a shared abstraction improves clarity and consistency.
+   - Maintain single sources of truth to avoid conflicts.
+   - Introducing new patterns is welcome if they clearly improve clarity, adaptability, or replace outdated/messy approaches.
 
 10. **Thoughtful use of dependencies**  
-    - External dependencies are allowed if they are reliable, well-maintained, and reduce workload significantly.  
-    - Prefer built-in features or existing project utilities when they serve the purpose well.  
+    - External dependencies are allowed if they are reliable, well-maintained, and reduce workload significantly.
+    - Prefer built-in features or existing project utilities when they serve the purpose well, and are maintainable.
+    - Avoid reinventing the wheel when a suitable, verified, reliable, well-maintained tool already exists.
     - Avoid unnecessary or redundant dependencies.  
-    - If adding a dependency, explain why it’s the right tool.  
+    - If adding a dependency, explain why it’s the right tool.
     - Ensure dependencies are flexible enough to adapt to future needs.
 
 11. **Isolated environments**  
@@ -70,9 +73,10 @@ They define baseline coding style principles that apply everywhere.
     - Ensure setups are portable and reproducible across machines.
 
 12. **Testing design**  
-    - Focus on realistic scenarios that detect regressions and misbehavior after updates.
-    - Include both unit and end-to-end tests, but avoid rare edge cases unlikely in real use.
-    - Keep tests performant and concise by reusing setup, teardown, and shared fixtures.
+    - Focus on realistic behavior, important failure paths, and likely regressions.
+    - Match coverage and test level to risk and value; do not require unit, integration, and end-to-end tests for every change.
+    - Avoid tests that merely restate hardcoded constraints, schemas, or implementation details.
+    - Keep tests performant and concise; reuse setup and fixtures when it improves clarity.
 
 13. **Git restrictions**
    - Do not use `git commit` or other repo-altering git commands, unless I specifically tell you to.
