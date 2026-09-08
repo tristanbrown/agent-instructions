@@ -81,6 +81,8 @@ Before generating parallel or iterative attempts:
 When asked to plan or produce multiple “attempts” or versions:
 - Do the Step 1 "Understand the Assignment" check just once. After I confirm, you can proceed with all attempts.
 
+### Independence and Variation
+
 - Treat the attempts as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
 - Each attempt must be **self-contained and internally consistent**.
 - Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.
@@ -91,6 +93,9 @@ When asked to plan or produce multiple “attempts” or versions:
   - Organizational philosophies
   - Levels of abstraction and modularity
   - Numbers and ordering of implementation stages
+
+### Subagent Orchestration
+
 - When using subagents, follow `AGENTS.SUBAGENTS.md`.
 - The manager prepares the shared assignment and assigns each attempt its variation choices.
 - The manager may generate one attempt; subagents generate the others independently.
@@ -99,7 +104,9 @@ When asked to plan or produce multiple “attempts” or versions:
   - Use manager-class models when creativity or architectural judgment merits it.
   - Use lower-cost models for constrained or technical attempts.
 - Do not generate attempts unlikely to improve the final decision.
-- After all attempts are complete, the manager compares them, selects a base, and synthesizes only justified improvements.
+
+### Scope Guardrails
+
 - **DO NOT ALLOW** feature-creep or unnecessary complexity. Each attempt should be **simple, elegant, and clearly differentiated** in its **core strategy**, not distinguished by layering on frivolous extras or exceeding scope.
 - **DO NOT USE production/ops/instrumentation features** as a way to differentiate attempts!
 - **DO NOT USE different types of UI (e.g. CLI, GUI, REST API, etc)** as a way to differentiate attempts!
@@ -108,6 +115,12 @@ When asked to plan or produce multiple “attempts” or versions:
 - Shared elements are acceptable when they represent **universally sound logic** rather than lazy copying.
 - Each attempt should be **simple and elegant**, with at least one **distinct rationale or design emphasis** that sets it apart from the others.
 - If you are “tempted” to add any of the forbidden items above, **STOP** and choose another axis of variation instead!
+
+### Results and Evaluation
+
+- After all attempts are complete, present them to the user.
+- Provide a brief comparison or use the Comparison and Evaluation Protocol as requested.
+- Do not select, combine, or synthesize attempts unless the user asks.
 
 ---
 
