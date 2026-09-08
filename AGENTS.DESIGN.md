@@ -1,19 +1,31 @@
-# AGENTS.ATTEMPTS.md
+# AGENTS.DESIGN.md
 [//]: # (DO NOT EDIT LOCALLY — this file is maintained in the agent-instructions repo and synced.)
+
+---
+
+## Iterative Design Protocol
+
+For ordinary design work:
+- Work through ongoing user dialogue.
+- Surface material decisions as they arise.
+- Keep specifications and plans current as decisions are accepted.
+- Resolve choices needed by the next planning or implementation step.
+- Defer choices that do not affect current scope or architecture.
+- Do not force strategy menus, parallel alternatives, or extra artifacts.
 
 ---
 
 ## Skeleton Spike Protocol
 
-From a given spec doc, generate N parallel skeleton spikes.
+From a given spec doc, generate one targeted skeleton spike when a material structural question remains unresolved. Generate multiple spikes only when the user explicitly requests parallel attempts.
 
 Definition:
 - A skeleton spike is a shallow, boundary-spanning, disposable implementation whose purpose is to force concrete architectural commitments.
 - It defines the minimal set of modules, interfaces, and constructor signatures required to implement a spec.
 
 Constraints:
-- Each spike must make different concrete architectural choices wherever the spec is ambiguous.
-- Spikes must define concrete components that correspond to responsibilities or boundaries implied by the spec.
+- Make concrete architectural choices for the question being probed.
+- Define concrete components that correspond to responsibilities or boundaries implied by the spec.
 - Components may declare ownership of responsibilities but must not implement substantive behavior for those responsibilities.
 - Role-only abstractions that defer commitment are not allowed.
 - Code does not need to run or be complete.
@@ -29,30 +41,8 @@ Output:
 
 ## Axis of Variation Discovery Protocol
 
-Before generating parallel or iterative attempts:
-- Discover design axes.
-  - Analyze the spec for design decisions that could meaningfully alter implementation. 
-  - This includes choices of tools and external libraries that the strategy relies on.
-  - For every external dependency referenced in the spec, include a provider or implementation-choice axis.
-  - Also include different approaches to abstraction and modularity.
-  - Do not assume all relevant decisions are explicitly stated.
-  - Surface any strategic choices the spec depends on, even if they are not stated.
-
-- For each axis, assign exactly one variation role:
-
-  **Decide Upfront:**
-  Choices that should be discussed and decided interactively, rather than independently selected across parallel attempts, because mixing them would make different versions uncomparable.
-
-  **Vary Across Attempts:**
-  Choices that can be independently selected in different attempts, where different architectures, tools, and approaches can be evaluated and compared.
-
-  **Deferred:**
-  Choices that can be stubbed, simplified, or postponed without constraining later decisions or architectures.
-
-- Use the Decide Upfront role sparingly: Only when the decision would reshape all parallel attempts.
-- For each axis, define the available choices, and include a one line rationale explaining why the assigned role is appropriate.
-- Present the results in plain markdown, such that they are legible in raw form.
-- Please stay concise!
+- When the user explicitly requests the full axis-discovery workflow, follow `AGENTS.AXES.md`.
+- The full artifact workflow is not required for every parallel-attempt run.
 
 ---
 
@@ -62,8 +52,8 @@ When asked to plan or produce multiple “attempts” or versions:
 - Do the Step 1 "Understand the Assignment" check just once. After I confirm, you can proceed with all attempts.
 
 - Treat the attempts as **independent explorations of the same problem**, not sequential refinements or variations derived from one another.
-- Each attempt must be **self-contained and internally consistent**. 
-- Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.  
+- Each attempt must be **self-contained and internally consistent**.
+- Attempts should **not learn from, reference, or build upon** each other’s ideas or artifacts. They are created in parallel, not serially.
 - Encourage **creative divergence**. Consider exploring different:
   - Intuitive mental models of the problem domain
   - Primary data abstractions and models
@@ -71,6 +61,11 @@ When asked to plan or produce multiple “attempts” or versions:
   - Organizational philosophies
   - Levels of abstraction and modularity
   - Numbers and ordering of implementation stages
+- When using subagents, follow `AGENTS.SUBAGENTS.md`.
+- Choose a cost- and capability-conscious model mix:
+  - Use manager-class models when creativity or architectural judgment merits it.
+  - Use lower-cost models for constrained or technical attempts.
+- Do not generate attempts unlikely to improve the final decision.
 - **DO NOT ALLOW** feature-creep or unnecessary complexity. Each attempt should be **simple, elegant, and clearly differentiated** in its **core strategy**, not distinguished by layering on frivolous extras or exceeding scope.
 - **DO NOT USE production/ops/instrumentation features** as a way to differentiate attempts!
 - **DO NOT USE different types of UI (e.g. CLI, GUI, REST API, etc)** as a way to differentiate attempts!
@@ -84,48 +79,53 @@ When asked to plan or produce multiple “attempts” or versions:
 
 ## Interactive Strategy Selection Protocol
 
-This is a modified version of the Parallel Attempts Protocol.
-- Instead of generating all of the attempts at once, I want you to propose each strategy to me with a BRIEF summary statement. 
-- I will say things like, "Accept", "Reject", "Clarify", "More like this", etc.
-- We keep going until I have "Accepted" the pre-determined number of different strategies.
-- Once you've confirmed I'm happy with our set of strategies, you can generate all of the implementation plans from them, following the rules of the Parallel Attempts Protocol and the planning rules. 
+Use only when the user explicitly asks to explore strategies interactively.
+
+- Propose one brief, distinct strategy at a time.
+- Wait for responses such as "Accept," "Reject," "Clarify," or "More like this."
+- Keep each strategy simple and meaningfully different in its core approach.
+- Continue until the user selects a direction or says the set is sufficient.
+- Do not require a predetermined number of strategies.
+- Do not generate full implementation plans automatically.
+- Use the planning rules when the user requests a plan for a selected strategy.
 
 ---
 
 ## Comparison and Evaluation Protocol
 
-Use this protocol only when I ask for a **"full comparison,"** or **"comparison protocol."**
-It is not necessary to use this protocol for **"brief comparisons."**
+Use this protocol only when the user asks for a **"full comparison"** or **"comparison protocol."**
+It is not necessary for **"brief comparisons."**
 
 When comparing multiple attempts, versions, or branches:
 
 ### Step 1: Score and describe each version individually
-For each version, provide **explanations and 1-5 star ⭐ ratings** in these dimensions:
+
+For each version, provide explanations and 1-5 star ⭐ ratings in these dimensions:
 - **Correctness**, properly adhering to the feature specs and constraints.
 - **Clarity and organization** of structure or writing.
-- **Creativity and ingenuity** of approach (diversity, inspired design, or clever solutions, as appropriate).
+- **Creativity and ingenuity** of approach.
 - **Architectural elegance** (modularity, separation of concerns, generality).
-- **Abstraction and conceptual clarity** (objects and their responsibilities are intuitive, reusable, and well-scoped).
+- **Abstraction and conceptual clarity** (objects and responsibilities are intuitive, reusable, and well-scoped).
 - **Simplicity and focus** (avoidance of premature complexity or feature creep).
-- **Overspecification or vagueness**, where applicable (e.g. in implementation plans).
+- **Overspecification or vagueness**, where applicable.
 - **Overall quality**.
 
-Rating Guidelines
+Rating Guidelines:
 - Use colored, visual stars like this: ⭐⭐⭐☆☆
-- Be harsh! Be critical! Do not be generous! Every plan should not get 4 stars out of 5!
-
-### Step 1.5: Did you use the colored stars?
-- IF YOU DIDN'T USE THE COLORED STARS, **YOU HAVE TO GO BACK AND REDO STEP 1.** FOLLOW MY INSTRUCTIONS!!!
+- Be harsh and critical; every version should not receive four stars out of five.
+- Verify the rating format before continuing.
 
 ### Step 2: Compare across versions
+
 Describe for each version:
 - **Pros and cons**, relative to the others.
 - **Unique contributions** not found in other versions.
-- Any **regressions or losses** compared to a defined base branch (if applicable).
+- Any **regressions or losses** compared to a defined base branch, if applicable.
 
 ### Step 3: Recommend a path forward
+
 - Choose **one version to move forward with**, explaining why.
-- Suggest any **specific improvements or elements** to pull in from other versions.
+- Suggest **specific improvements or elements** to pull in from other versions.
 
 ---
 
