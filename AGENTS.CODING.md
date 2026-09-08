@@ -44,13 +44,15 @@ They define baseline coding style principles that apply everywhere.
    - Portable logic should be clean, general, and free of project-specific coupling. 
    - Use portability as a test of modularity, not as a reason for speculative generalization. 
 
-8. **Separation of concerns**  
-   - Keep distinct layers of the codebase isolated:  
+8. **Separation of concerns**
+   - Identify distinct responsibilities and architectural boundaries appropriate to the project.
+   - Keep distinct layers of the codebase isolated; for example:  
      - UI layout separate from widget logic  
      - Widget logic separate from data processing  
      - Data processing separate from database access  
    - Each layer should be as self-contained and portable as possible.  
-   - Cross-layer dependencies should be minimal, explicit, and well-defined.  
+   - Cross-layer dependencies should be minimal, explicit, and well-defined.
+   - Do not introduce layers or abstractions without a distinct responsibility.
 
 9. **Consistency and consolidation**  
    - Reuse existing logic and abstractions whenever possible.
