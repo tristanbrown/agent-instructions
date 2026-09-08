@@ -44,6 +44,11 @@ This doc defines the standards for agent-written documents: how to structure the
 - Using examples that become de facto requirements.
 - Making trivial or unimportant decisions upfront. 
 
+### Loss of Intent
+- Changing content without understanding its purpose.
+- Losing substantive content while condensing or reorganizing.
+- Optimizing superficial metrics at the expense of meaning or usefulness.
+
 ### Biasing Examples
 - Using examples when the goal is generalization.
 - Using sample names or implementation hints that weren’t requested.
