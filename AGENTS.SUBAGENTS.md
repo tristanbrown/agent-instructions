@@ -28,6 +28,7 @@
 - Give both models the same request and relevant context.
 - Keep their proposals hidden from each other until both are complete.
 - Compare instruction adherence, complexity, specification, readability, organization, omissions, and conflicts.
+- Reject proposals that violate the request or AGENTS rules and principles; synthesis does not require using both.
 - Choose the stronger proposal as the base and incorporate only useful improvements from the other.
 
 ---
