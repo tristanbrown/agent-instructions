@@ -10,6 +10,9 @@ This repository uses layered agent instructions.
       - `AGENTS.CODING.md`: When we are implementing code or creating implementation plans.
       - `AGENTS.PLANNING.md`: When we are discussing planning docs, creating implementation plans, or implementing code.
       - `AGENTS.DOCS.md`: When writing .md docs.
+      - `AGENTS.DESIGN.md`: When making design decisions, exploring alternatives, or generating parallel attempts.
+      - `AGENTS.AXES.md`: When explicitly using the full axes-of-variation workflow.
+      - `AGENTS.SUBAGENTS.md`: Before any subagent work.
 
 2. **Project-specific rules**
    - `AGENTS.PROJECT.md` at the project root contains rules unique to this repository.
