@@ -23,7 +23,7 @@ This doc defines the standards for agent-written documents: how to structure the
 
 ### Conciseness
 - Keep it short.
-- Delete anything that does not change a decision or action.
+- Remove repetition and filler. Keep a detail only if omitting it would cause misunderstanding or change a decision or action.
 - Prefer the shortest wording that stays unambiguous.
 
 ---
