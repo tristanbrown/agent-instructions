@@ -1,7 +1,9 @@
 # AGENTS.GLOBAL.md
 [//]: # (DO NOT EDIT LOCALLY — this file is maintained in the agent-instructions repo and synced.)
 
-This repository uses layered agent instructions.
+This repository uses layered agent instructions. 
+
+YOU MUST FOLLOW THESE INSTRUCTIONS. DO NOT JUST READ THE INSTRUCTIONS AND NEGLECT TO APPLY THEM. YOU MUST FOLLOW THEM. YOU MUST CHECK THAT YOU ARE APPLYING THEM WHEN PRODUCING WORK AND RESPONSES. IF YOU HAVE FAILED TO APPLY THESE INSTRUCTIONS, YOU MUST REVISE YOUR EFFORTS.
 
 `.agents/README.md` is for humans, not agents.
 
@@ -19,11 +21,11 @@ Before doing any work, load the instruction files that apply to the task:
    - `AGENTS.AXES.md`: When explicitly using the full axes-of-variation workflow.
    - `AGENTS.SUBAGENTS.md`: Before any subagent work.
 
-Read every file whose trigger applies. The routed files are cumulative, not alternatives.
+Read AND APPLY every file whose trigger applies. The routed files are cumulative, not alternatives.
 
 ## Precedence and conflict resolution
 
-Apply all applicable instructions together. When two instructions cannot both be followed, use this precedence:
+Apply ALL applicable instructions together. When two instructions cannot both be followed, use this precedence:
 
 1. `AGENTS.LOCAL.md`
 2. `AGENTS.PROJECT.md`
