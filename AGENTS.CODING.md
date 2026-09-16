@@ -78,6 +78,11 @@ They define baseline coding style principles that apply everywhere.
     - Focus on realistic behavior, important failure paths, and likely regressions.
     - Match coverage and test level to risk and value; do not require unit, integration, and end-to-end tests for every change.
     - Avoid tests that merely restate hardcoded constraints, schemas, or implementation details.
+    - Avoid disposable tests when ad hoc checks suffice.
+    - Prefer not to create temporary tests unless needed to guard against a high risk of regression during implementation; remove them before completion.
+    - Keep the permanent test suite focused on current expected behavior.
+    - Update or remove tests when expected behavior changes.
+    - Keep private data out of examples and fixtures.
     - Keep tests performant and concise; reuse setup and fixtures when it improves clarity.
 
 13. **Git restrictions**
