@@ -68,13 +68,19 @@ They define baseline coding style principles that apply everywhere.
     - If adding a dependency, explain why it’s the right tool.
     - Ensure dependencies are flexible enough to adapt to future needs.
 
-11. **Isolated environments**  
+11. **Database schema ownership**
+    - When using an ORM or declarative schema tool, define the complete current physical schema in organized table, model, or schema modules using that tool's abstractions.
+    - Keep current-state schema definitions as the source of truth and keep database access code aligned with them.
+    - Use migrations only to describe transitions between historical schema states; keep them focused and as thin as the tool safely permits.
+    - The current application schema must not exist only in migration files. A fresh database must be creatable from the current schema definitions alone, without migration history.
+
+12. **Isolated environments**
     - Do not install dependencies directly to the host system.  
     - Always use isolated environments (e.g., venv, conda, or language-specific equivalents).  
     - Containerized environments (e.g., Docker) are an exception: system-level installs inside a container are acceptable.  
     - Ensure setups are portable and reproducible across machines.
 
-12. **Testing design**  
+13. **Testing design**
     - Focus on realistic behavior, important failure paths, and likely regressions.
     - Match coverage and test level to risk and value; do not require unit, integration, and end-to-end tests for every change.
     - Avoid tests that merely restate hardcoded constraints, schemas, or implementation details.
@@ -85,7 +91,7 @@ They define baseline coding style principles that apply everywhere.
     - Keep private data out of examples and fixtures.
     - Keep tests performant and concise; reuse setup and fixtures when it improves clarity.
 
-13. **Git restrictions**
+14. **Git restrictions**
    - Do not use `git commit` or other repo-altering git commands, unless I specifically tell you to.
    - If I tell you to work across multiple git branches, then committing to those branches may be necessary. 
 
