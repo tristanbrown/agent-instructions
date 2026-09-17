@@ -74,15 +74,7 @@ EXTREMELY STRICT RULE against premature productionization.
   - Include current-state table/model definitions, transition migration logic, build output, and a smoke test that creates a fresh database from the current definitions.
   - Do **not** mix schema changes with logic or UI features.
   - Complete the schema stage **before** writing any code that depends on it.
-
-- **Treat the current declarative schema as the source of truth:**
-  - Define the complete current database structure in well-organized table, model, or schema files using the selected ORM or schema tool's native abstractions.
-  - A fresh database must be creatable in the current application-supporting state from those definitions, without requiring migration history to specify what the database is now.
-  - Do not reduce an ORM or schema tool to a thin runtime wrapper while placing the real schema definition in migrations.
-
-- **Treat migrations as transition history, not as the current schema definition:**
-  - Each migration should express only the change needed to move between two schema states and should be as thin as the tool safely permits.
-  - Prefer generating migrations from, or validating them against, the declarative schema when the selected tool supports it.
+  - Put each later schema change in the focused stage that requires it instead of scattering unrelated schema tweaks across later stages.
 
 ---
 

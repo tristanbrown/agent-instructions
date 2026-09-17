@@ -38,60 +38,32 @@ They define baseline coding style principles that apply everywhere.
    - Prefer solutions that are maintainable, robust, and aligned with project conventions.  
    - If a proper solution is unclear, ask for clarification instead of guessing.  
 
-7. **Portability through modularity**  
-   - Structure logic into focused modules, functions, or classes with clear boundaries.
-   - Avoid embedding universal logic in places where it cannot be reused.  
-   - Portable logic should be clean, general, and free of project-specific coupling. 
-   - Use portability as a test of modularity, not as a reason for speculative generalization. 
+7. **Thoughtful use of dependencies**
+   - External dependencies are allowed if they are reliable, well-maintained, and reduce workload significantly.
+   - Prefer built-in features or existing project utilities when they serve the purpose well, and are maintainable.
+   - Avoid reinventing the wheel when a suitable, verified, reliable, well-maintained tool already exists.
+   - Avoid unnecessary or redundant dependencies.
+   - If adding a dependency, explain why it’s the right tool.
+   - Ensure dependencies are flexible enough to adapt to future needs.
 
-8. **Separation of concerns**
-   - Identify distinct responsibilities and architectural boundaries appropriate to the project.
-   - Keep distinct layers of the codebase isolated; for example:  
-     - UI layout separate from widget logic  
-     - Widget logic separate from data processing  
-     - Data processing separate from database access  
-   - Each layer should be as self-contained and portable as possible.  
-   - Cross-layer dependencies should be minimal, explicit, and well-defined.
-   - Do not introduce layers or abstractions without a distinct responsibility.
+8. **Isolated environments**
+   - Do not install dependencies directly to the host system.
+   - Always use isolated environments (e.g., venv, conda, or language-specific equivalents).
+   - Containerized environments (e.g., Docker) are an exception: system-level installs inside a container are acceptable.
+   - Ensure setups are portable and reproducible across machines.
 
-9. **Consistency and consolidation**  
-   - Reuse existing logic and abstractions whenever possible.
-   - Consolidate similar solutions when a shared abstraction improves clarity and consistency.
-   - Maintain single sources of truth to avoid conflicts.
-   - Introducing new patterns is welcome if they clearly improve clarity, adaptability, or replace outdated/messy approaches.
+9. **Testing design**
+   - Focus on realistic behavior, important failure paths, and likely regressions.
+   - Match coverage and test level to risk and value; do not require unit, integration, and end-to-end tests for every change.
+   - Avoid tests that merely restate hardcoded constraints, schemas, or implementation details.
+   - Avoid disposable tests when ad hoc checks suffice.
+   - Prefer not to create temporary tests unless needed to guard against a high risk of regression during implementation; remove them before completion.
+   - Keep the permanent test suite focused on current expected behavior.
+   - Update or remove tests when expected behavior changes.
+   - Keep private data out of examples and fixtures.
+   - Keep tests performant and concise; reuse setup and fixtures when it improves clarity.
 
-10. **Thoughtful use of dependencies**  
-    - External dependencies are allowed if they are reliable, well-maintained, and reduce workload significantly.
-    - Prefer built-in features or existing project utilities when they serve the purpose well, and are maintainable.
-    - Avoid reinventing the wheel when a suitable, verified, reliable, well-maintained tool already exists.
-    - Avoid unnecessary or redundant dependencies.  
-    - If adding a dependency, explain why it’s the right tool.
-    - Ensure dependencies are flexible enough to adapt to future needs.
-
-11. **Database schema ownership**
-    - When using an ORM or declarative schema tool, define the complete current physical schema in organized table, model, or schema modules using that tool's abstractions.
-    - Keep current-state schema definitions as the source of truth and keep database access code aligned with them.
-    - Use migrations only to describe transitions between historical schema states; keep them focused and as thin as the tool safely permits.
-    - The current application schema must not exist only in migration files. A fresh database must be creatable from the current schema definitions alone, without migration history.
-
-12. **Isolated environments**
-    - Do not install dependencies directly to the host system.  
-    - Always use isolated environments (e.g., venv, conda, or language-specific equivalents).  
-    - Containerized environments (e.g., Docker) are an exception: system-level installs inside a container are acceptable.  
-    - Ensure setups are portable and reproducible across machines.
-
-13. **Testing design**
-    - Focus on realistic behavior, important failure paths, and likely regressions.
-    - Match coverage and test level to risk and value; do not require unit, integration, and end-to-end tests for every change.
-    - Avoid tests that merely restate hardcoded constraints, schemas, or implementation details.
-    - Avoid disposable tests when ad hoc checks suffice.
-    - Prefer not to create temporary tests unless needed to guard against a high risk of regression during implementation; remove them before completion.
-    - Keep the permanent test suite focused on current expected behavior.
-    - Update or remove tests when expected behavior changes.
-    - Keep private data out of examples and fixtures.
-    - Keep tests performant and concise; reuse setup and fixtures when it improves clarity.
-
-14. **Git restrictions**
+10. **Git restrictions**
    - Do not use `git commit` or other repo-altering git commands, unless I specifically tell you to.
    - If I tell you to work across multiple git branches, then committing to those branches may be necessary. 
 

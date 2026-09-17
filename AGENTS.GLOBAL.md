@@ -14,6 +14,7 @@ Before doing any work, load the instruction files that apply to the task:
 1. Read `AGENTS.PROJECT.md` at the project root in full. It contains rules and context unique to the repository and is required for every task.
 2. If `AGENTS.LOCAL.md` exists at the project root, read it in full. It contains rules unique to the local workspace.
 3. Read each applicable shared rule file from `.agents/`:
+   - `AGENTS.ARCHITECTURE.md`: When making architectural decisions, creating implementation plans, or implementing code.
    - `AGENTS.CODING.md`: When implementing code, creating implementation plans, or proposing tests or verification strategy.
    - `AGENTS.PLANNING.md`: When discussing planning documents, creating implementation plans, or implementing code.
    - `AGENTS.DOCS.md`: When creating or editing Markdown documents.
