@@ -32,7 +32,11 @@ These rules define durable responsibility boundaries and sources of truth. Apply
 4. **Database schema ownership**
    - When using an ORM or declarative schema tool, define the complete current physical schema in organized table, model, or schema modules using that tool's native abstractions.
    - Treat those current-state definitions as the source of truth and keep database access code aligned with them.
-   - Treat migrations as transition history, not as the current schema definition. Each migration should express only the change between two schema states and be as thin as the tool safely permits.
-   - Prefer generating migrations from, or validating them against, the declarative schema when the selected tool supports it.
    - Do not reduce an ORM or schema tool to a thin runtime wrapper while placing the real schema definition in migrations.
    - A fresh database must be creatable in the current application-supporting state from the current schema definitions alone, without migration history.
+
+5. **Migration history**
+   - Migrations record transitions between accepted schema baselines, not transitions between development revisions.
+   - A migration becomes immutable history only after its schema state has been accepted and may be relied upon by a non-disposable database.
+   - Keep migrations as thin as the selected tool safely permits.
+   - Prefer generating migrations from, or validating them against, the declarative schema when the selected tool supports it.

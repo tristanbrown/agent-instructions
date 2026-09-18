@@ -67,14 +67,10 @@ EXTREMELY STRICT RULE against premature productionization.
 ## Special rules for database schema and migrations
 
 - Do not create a database before it is necessary.
-- **Only add schema when a feature requires persistent data.**
+- When persistence first becomes necessary, create a dedicated initial schema stabilization stage before dependent feature stages.
 - Let real sample payloads inform table and column design.
-
-- **When schema is needed, implement it in a single, focused stage:**
-  - Include current-state table/model definitions, transition migration logic, build output, and a smoke test that creates a fresh database from the current definitions.
-  - Do **not** mix schema changes with logic or UI features.
-  - Complete the schema stage **before** writing any code that depends on it.
-  - Put each later schema change in the focused stage that requires it instead of scattering unrelated schema tweaks across later stages.
+- Feature stages must not create migrations. All schema changes and migration work belong to dedicated schema stabilization stages.
+- During implementation and review, use disposable databases created from the current declarative schema, and revise or replace any pending migration rather than appending migrations for intermediate edits.
 
 ---
 
