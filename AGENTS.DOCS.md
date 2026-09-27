@@ -5,7 +5,7 @@
 
 ## Purpose
 
-This doc defines the standards for agent-written documents: how to structure them, the appropriate level of detail, and what to avoid. It applies to all planning, spec, protocol, and strategy docs unless overridden by task-specific rules.
+This doc defines the standards for agent-written documents: how to structure them, the appropriate level of detail, and what to avoid. It applies to all documents agents create or edit unless overridden by task-specific rules.
 
 ---
 
@@ -25,6 +25,14 @@ This doc defines the standards for agent-written documents: how to structure the
 - Keep it short.
 - Remove repetition and filler. Keep a detail only if omitting it would cause misunderstanding or change a decision or action.
 - Prefer the shortest wording that stays unambiguous.
+
+### Correcting documents
+
+A corrected document should present the current understanding, not the history of the edit.
+
+- Replace superseded descriptions with the corrected content.
+- Do not preserve superseded descriptions as negations, contrasts, or commentary about the correction.
+- Negative constraints must express independent requirements.
 
 ---
 
