@@ -63,10 +63,6 @@ They define baseline coding style principles that apply everywhere.
    - Keep private data out of examples and fixtures.
    - Keep tests performant and concise; reuse setup and fixtures when it improves clarity.
 
-10. **Git restrictions**
-   - Do not use `git commit` or other repo-altering git commands, unless I specifically tell you to.
-   - If I tell you to work across multiple git branches, then committing to those branches may be necessary. 
-
 ---
 
 ## Philosophical Note
