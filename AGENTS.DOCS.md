@@ -27,6 +27,7 @@ This doc defines standards for work on documents and the quality of their conten
 - Use direct verbs instead of abstract descriptions of actions.
 - Keep a detail only if omitting it would cause misunderstanding or change a decision or action.
 - Prefer the shortest wording that stays unambiguous.
+- State general concepts directly, not through enumerated cases. Limit enumerations to complete lists of finite sets and necessary illustrations identified as non-exhaustive.
 
 ### Correcting documents
 
@@ -52,6 +53,7 @@ A corrected document should present the current understanding, not the history o
 - Setting arbitrary numerical limits or heuristic rules.
 - Introducing arbitrary targets, quotas, or rubrics.
 - Using examples that become de facto requirements.
+- Replacing a general concept with a finite enumeration that appears exhaustive (listing A, B, C, D, and E when any letter may apply).
 - Making trivial or unimportant decisions upfront. 
 
 ### Loss of Intent
@@ -60,7 +62,6 @@ A corrected document should present the current understanding, not the history o
 - Optimizing superficial metrics at the expense of meaning or usefulness.
 
 ### Biasing Examples
-- Using examples when the goal is generalization.
 - Using sample names or implementation hints that weren’t requested.
 
 ### Verbosity
