@@ -16,7 +16,7 @@ This doc defines standards for work on documents and the quality of their conten
 - Use clean, minimal Markdown.
 - Use headings, bullets, and numbered lists, not dense paragraphs.
 - Keep each section single-purpose.
-- Put new content in the appropriate section.
+- Before adding content, assess whether the documentation needs it and which document and section it belongs in.
 - Add sections only for distinct topics.
 - Use an existing section when it fits.
 - **Bold text:** Useful as in-line headers.
@@ -75,3 +75,4 @@ A corrected document should present the current understanding, not the history o
 - Emphasis-heavy formatting that reduces skimmability.
 - Removing structure that improves readability.
 - Content placed under unrelated headings.
+- Treating the current document as the default destination for material merely because it arose while that document was being discussed.
