@@ -1,7 +1,9 @@
 # AGENTS.GLOBAL.md
 [//]: # (DO NOT EDIT LOCALLY — this file is maintained in the agent-instructions repo and synced.)
 
-This repository uses layered agent instructions. 
+## Purpose
+
+This file routes agents to applicable instruction documents and resolves conflicts among them. All other rules belong in those documents and should not be placed here.
 
 YOU MUST FOLLOW THESE INSTRUCTIONS. DO NOT JUST READ THE INSTRUCTIONS AND NEGLECT TO APPLY THEM. YOU MUST FOLLOW THEM. YOU MUST CHECK THAT YOU ARE APPLYING THEM WHEN PRODUCING WORK AND RESPONSES. IF YOU HAVE FAILED TO APPLY THESE INSTRUCTIONS, YOU MUST REVISE YOUR EFFORTS.
 
