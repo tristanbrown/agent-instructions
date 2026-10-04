@@ -20,7 +20,7 @@ Before doing any work, load the instruction files that apply to the task:
    - `AGENTS.ARCHITECTURE.md`: When making architectural decisions, creating implementation plans, or implementing code.
    - `AGENTS.CODING.md`: When implementing code, creating implementation plans, or proposing tests or verification strategy.
    - `AGENTS.PLANNING.md`: When discussing planning documents, creating implementation plans, or implementing code.
-   - `AGENTS.DOCS.md`: When creating or editing documents.
+   - `AGENTS.DOCS.md`: For every stage of work on documents, including planning.
    - `AGENTS.DESIGN.md`: When making design decisions, exploring alternatives, or generating parallel attempts.
    - `AGENTS.AXES.md`: When explicitly using the full axes-of-variation workflow.
    - `AGENTS.SUBAGENTS.md`: Before any subagent work.

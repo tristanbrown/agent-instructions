@@ -5,7 +5,7 @@
 
 ## Purpose
 
-This doc defines the standards for agent-written documents: how to structure them, the appropriate level of detail, and what to avoid. It applies to all documents agents create or edit unless overridden by task-specific rules.
+This doc defines standards for work on documents and the quality of their content.
 
 ---
 
