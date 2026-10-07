@@ -17,6 +17,7 @@ This doc defines standards for work on documents and the quality of their conten
 - Use headings, bullets, and numbered lists, not dense paragraphs.
 - Keep each section single-purpose.
 - Before adding content, assess whether the documentation needs it and which document and section it belongs in.
+- Do not add work narration or development history to documents that aren't specifically created as historical records.
 - Add sections only for distinct topics.
 - Use an existing section when it fits.
 - **Bold text:** Useful as in-line headers.
@@ -60,14 +61,15 @@ A corrected document should present the current understanding, not the history o
 - Changing content without understanding its purpose.
 - Losing substantive content while condensing or reorganizing.
 - Optimizing superficial metrics at the expense of meaning or usefulness.
+- Replacing a prohibition with conditional permission (e.g. "Do A only if B").
 
 ### Biasing Examples
 - Using sample names or implementation hints that weren’t requested.
 
 ### Verbosity
-- Long paragraphs for list-like content.
-- Bullets that bundle multiple ideas.
-- Repeating the same point across sections.
+- Using a long paragraph for list-like content.
+- Bundling multiple ideas into one bullet.
+- Stating the same concept multiple times in different words across multiple bullets.
 
 ### Poor Formatting
 - Deep nesting.
