@@ -24,7 +24,7 @@ Before doing any work, load the instruction files that apply to the task:
    - `AGENTS.DOCS.md`: For every stage of work on documents, including planning.
    - `AGENTS.DESIGN.md`: When making design decisions, exploring alternatives, or generating parallel attempts.
    - `AGENTS.AXES.md`: When explicitly using the full axes-of-variation workflow.
-   - `AGENTS.SUBAGENTS.md`: Before any subagent work.
+   - `AGENTS.SUBAGENTS.md`: Before any subagent work or test-suite execution.
 
 Read AND APPLY every file whose trigger applies. The routed files are cumulative, not alternatives.
 
