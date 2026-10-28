@@ -40,3 +40,15 @@ These rules define durable responsibility boundaries and sources of truth. Apply
    - A migration becomes immutable history only after its schema state has been accepted and may be relied upon by a non-disposable database.
    - Keep migrations as thin as the selected tool safely permits.
    - Prefer generating migrations from, or validating them against, the declarative schema when the selected tool supports it.
+
+6. **Async UI behavior**
+   - Async completion must not override a later user action that supersedes it.
+   - A successful write must not leave the UI representing older state.
+   - Navigation must not cause the results of pending work to be misassigned.
+
+   **Example strategy: Workspace ownership and conflict lanes**
+   - The workspace is the feature-level orchestration container and closest common ancestor of views that can affect one another through navigation or mutations.
+   - The workspace alone owns navigation.
+   - Mutations are sent through an asynchronous gateway that assigns each one to a conflict lane.
+   - Each lane serializes mutations and reconciles mutation and refresh results for one state segment.
+   - Different lanes run concurrently.
